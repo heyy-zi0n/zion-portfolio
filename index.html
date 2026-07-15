@@ -1,0 +1,1492 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Premium SEO Meta Tags -->
+    <title>Zion Omosanya | Premium Web Developer & Virtual Assistant Portfolio</title>
+    <meta name="description" content="Freelance Web Developer & Virtual Assistant specializing in building premium responsive websites, Figma-to-HTML, data analysis, document formatting, and AI workflow optimization. Hire me on Fiverr!" />
+    <meta name="keywords" content="web development, figma to html, data entry, virtual assistant, document formatting, tailwind css, javascript, freelancer, fiverr web developer" />
+    <meta name="author" content="Zion Omosanya" />
+    <link rel="canonical" href="https://yourportfolio.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourportfolio.com/" />
+    <meta property="og:title" content="Zion Omosanya | Premium Web Developer & Virtual Assistant" />
+    <meta property="og:description" content="Freelance Web Developer & Virtual Assistant specializing in building premium responsive websites, Figma-to-HTML, data analysis, document formatting, and AI workflow optimization. Hire me on Fiverr!" />
+    <meta property="og:image" content="https://yourportfolio.com/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yourportfolio.com/" />
+    <meta property="twitter:title" content="Zion Omosanya | Premium Web Developer & Virtual Assistant" />
+    <meta property="twitter:description" content="Freelance Web Developer & Virtual Assistant specializing in building premium responsive websites, Figma-to-HTML, data analysis, document formatting, and AI workflow optimization. Hire me on Fiverr!" />
+    <meta property="twitter:image" content="https://yourportfolio.com/og-image.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zion Omosanya",
+        "url": "https://yourportfolio.com",
+        "jobTitle": "Freelance Web Developer & Virtual Assistant",
+        "sameAs": [
+          "https://github.com/ziono",
+          "https://www.linkedin.com/in/ziono",
+          "https://www.fiverr.com/ziono"
+        ],
+        "knowsAbout": [
+          "Web Development",
+          "Tailwind CSS",
+          "JavaScript",
+          "Data Entry",
+          "Virtual Assistance",
+          "Document Formatting",
+          "AI Prompt Engineering"
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-brand-bg text-brand-primary font-sans antialiased selection:bg-brand-accent selection:text-white transition-colors duration-300">
+    
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header / Sticky Navigation -->
+    <header class="navbar fixed top-0 left-0 w-full z-50 bg-brand-bg/80 border-b border-transparent transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="#home" class="text-xl font-display font-bold tracking-tight text-brand-primary hover:text-brand-accent transition-colors flex items-center gap-2">
+          <span class="w-8 h-8 rounded-lg bg-brand-accent flex items-center justify-center text-white text-sm">Z</span>
+          Zion <span class="text-brand-accent">Omosanya</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#home" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">Home</a>
+          <a href="#about" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">About</a>
+          <a href="#services" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">Services</a>
+          <a href="#portfolio" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">Portfolio</a>
+          <a href="#skills" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">Skills</a>
+          <a href="#process" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">Process</a>
+          <a href="#testimonials" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">Testimonials</a>
+          <a href="#contact" class="text-sm font-medium text-brand-secondary hover:text-brand-primary transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTAs & Theme Toggle -->
+        <div class="hidden md:flex items-center gap-4">
+          <!-- Dark Mode Toggle Button -->
+          <button class="theme-toggle p-2.5 rounded-full border border-brand-border hover:bg-brand-surface transition-colors" aria-label="Toggle dark mode">
+            <i data-lucide="moon" class="moon-icon w-4 h-4 text-brand-secondary"></i>
+            <i data-lucide="sun" class="sun-icon w-4 h-4 text-brand-secondary hidden"></i>
+          </button>
+          
+          <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="bg-brand-accent hover:bg-brand-accent/90 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200">
+            Hire on Fiverr
+          </a>
+        </div>
+
+        <!-- Mobile Menu Controls -->
+        <div class="flex md:hidden items-center gap-3">
+          <button class="theme-toggle p-2 rounded-full border border-brand-border" aria-label="Toggle dark mode">
+            <i data-lucide="moon" class="moon-icon w-4 h-4 text-brand-secondary"></i>
+            <i data-lucide="sun" class="sun-icon w-4 h-4 text-brand-secondary hidden"></i>
+          </button>
+          
+          <button id="mobile-menu-btn" class="p-2 border border-brand-border rounded-full text-brand-secondary hover:text-brand-primary hover:bg-brand-surface transition-all" aria-expanded="false" aria-label="Toggle Navigation Menu">
+            <i data-lucide="menu" class="menu-icon w-5 h-5"></i>
+            <i data-lucide="x" class="close-icon w-5 h-5 hidden"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Navigation Dropdown -->
+      <div id="mobile-menu" class="hidden md:hidden flex-col bg-brand-surface border-b border-brand-border absolute top-20 left-0 w-full p-6 gap-4 shadow-lg transition-all duration-300">
+        <a href="#home" class="text-base font-medium text-brand-secondary hover:text-brand-primary">Home</a>
+        <a href="#about" class="text-base font-medium text-brand-secondary hover:text-brand-primary">About</a>
+        <a href="#services" class="text-base font-medium text-brand-secondary hover:text-brand-primary">Services</a>
+        <a href="#portfolio" class="text-base font-medium text-brand-secondary hover:text-brand-primary">Portfolio</a>
+        <a href="#skills" class="text-base font-medium text-brand-secondary hover:text-brand-primary">Skills</a>
+        <a href="#process" class="text-base font-medium text-brand-secondary hover:text-brand-primary">Process</a>
+        <a href="#testimonials" class="text-base font-medium text-brand-secondary hover:text-brand-primary">Testimonials</a>
+        <a href="#faq" class="text-base font-medium text-brand-secondary hover:text-brand-primary">FAQ</a>
+        <a href="#contact" class="text-base font-medium text-brand-secondary hover:text-brand-primary">Contact</a>
+        <hr class="border-brand-border my-2">
+        <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer" class="bg-brand-accent hover:bg-brand-accent/90 text-white text-center font-semibold py-3 rounded-lg transition-colors">
+          Hire on Fiverr
+        </a>
+      </div>
+    </header>
+
+    <main class="w-full">
+      
+      <!-- HERO SECTION -->
+      <section id="home" class="min-h-screen flex items-center pt-28 pb-16 relative overflow-hidden bg-grid">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
+          
+          <!-- Hero Text -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            
+            <div class="hero-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-brand-border bg-brand-surface text-xs font-semibold text-brand-accent mb-6 w-fit shadow-sm">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              Available for Freelance & Fiverr Projects
+            </div>
+            
+            <h1 class="hero-heading text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-brand-primary leading-[1.1] mb-6">
+              <span class="reveal-text block overflow-hidden">
+                <span class="reveal-line block">Building Modern Websites</span>
+              </span>
+              <span class="reveal-text block overflow-hidden text-gradient">
+                <span class="reveal-line block">That Help Businesses</span>
+              </span>
+              <span class="reveal-text block overflow-hidden">
+                <span class="reveal-line block">Grow Online.</span>
+              </span>
+            </h1>
+
+            <p class="hero-desc text-lg text-brand-secondary mb-8 max-w-xl leading-relaxed">
+              Hello, I'm Zion Omosanya. A passionate frontend developer and digital solutions assistant. I deliver high-performance responsive websites, detailed data management, and optimized workflows to accelerate your business goals.
+            </p>
+
+            <div class="hero-ctas flex flex-wrap gap-4">
+              <a href="#portfolio" class="bg-brand-accent hover:bg-brand-accent/95 text-white font-semibold px-7 py-3.5 rounded-xl flex items-center gap-2 group transition-all shadow-md shadow-brand-accent/15">
+                View Portfolio
+                <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <a href="https://www.fiverr.com/ziondatapro?public_mode=true" target="_blank" rel="noopener noreferrer" class="bg-brand-surface hover:bg-brand-surface/90 text-brand-primary font-semibold px-7 py-3.5 rounded-xl border border-brand-border flex items-center gap-2 transition-all">
+                Hire Me on Fiverr
+              </a>
+              <a href="#contact" class="text-sm font-semibold text-brand-secondary hover:text-brand-primary flex items-center gap-1.5 transition-colors w-full sm:w-auto mt-2 sm:mt-0 sm:ml-4">
+                <i data-lucide="message-square" class="w-4 h-4"></i> Contact Me
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Representation -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="hero-visual relative w-full max-w-md aspect-square bg-gradient-to-tr from-brand-accent/10 to-brand-accent/5 rounded-3xl border border-brand-border/60 p-8 flex items-center justify-center overflow-hidden shadow-2xl">
+              
+              <!-- Ambient lighting nodes -->
+              <div class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-brand-accent/10 blur-3xl"></div>
+              <div class="absolute -bottom-12 -left-12 w-48 h-48 rounded-full bg-brand-accent/10 blur-3xl"></div>
+              
+              <!-- Premium Stylized CSS Mockup inside Hero -->
+              <div class="w-full h-full bg-brand-surface border border-brand-border/80 rounded-2xl shadow-xl flex flex-col overflow-hidden relative">
+                <div class="h-10 border-b border-brand-border px-4 flex items-center justify-between bg-brand-bg/50">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                  </div>
+                  <div class="text-[10px] text-brand-secondary font-mono bg-brand-bg px-4 py-0.5 rounded-full border border-brand-border/80">zion-dev.js</div>
+                  <div class="w-4"></div>
+                </div>
+                
+                <div class="flex-1 p-6 font-mono text-xs overflow-hidden flex flex-col justify-between">
+                  <div class="space-y-2">
+                    <p class="text-brand-secondary"><span class="text-blue-500">const</span> developer = {</p>
+                    <p class="pl-4 text-brand-secondary">name: <span class="text-amber-600 dark:text-amber-400">"Zion Omosanya"</span>,</p>
+                    <p class="pl-4 text-brand-secondary">role: <span class="text-amber-600 dark:text-amber-400">"Frontend Dev & VA"</span>,</p>
+                    <p class="pl-4 text-brand-secondary">skills: [<span class="text-emerald-600">"JS"</span>, <span class="text-emerald-600">"Tailwind"</span>, <span class="text-emerald-600">"GSAP"</span>],</p>
+                    <p class="pl-4 text-brand-secondary">focus: <span class="text-amber-600 dark:text-amber-400">"Premium Clean Code"</span></p>
+                    <p class="text-brand-secondary">};</p>
+                  </div>
+                  
+                  <!-- Interactive Chart Mockup -->
+                  <div class="border border-brand-border rounded-xl p-3.5 bg-brand-bg/30">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-[9px] font-semibold text-brand-secondary">Performance Velocity</span>
+                      <span class="text-[9px] text-green-500 font-bold">99%</span>
+                    </div>
+                    <div class="flex items-end gap-1.5 h-12 pt-2">
+                      <div class="flex-1 bg-brand-accent/20 h-1/3 rounded-t"></div>
+                      <div class="flex-1 bg-brand-accent/40 h-2/3 rounded-t"></div>
+                      <div class="flex-1 bg-brand-accent/60 h-1/2 rounded-t"></div>
+                      <div class="flex-1 bg-brand-accent h-full rounded-t"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="py-24 border-t border-brand-border bg-brand-surface dark:bg-zinc-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            
+            <!-- Bio & Values -->
+            <div class="lg:col-span-7 space-y-8">
+              <div class="animate-fade-up">
+                <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">About Me</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight">
+                  Crafting Digital Experiences with Intention & Care
+                </h2>
+              </div>
+
+              <div class="text-base text-brand-secondary space-y-4 leading-relaxed animate-fade-up">
+                <p>
+                  I'm Zion Omosanya, an independent web developer and virtual assistant. I specialize in building light, robust, and accessible digital assets that bridge the gap between aesthetics and function.
+                </p>
+                <p>
+                  My dual background in technical development and organized administrative support enables me to solve a wide variety of client problems—from clean website design and bug fixing to complex spreadsheets, PDF conversions, and AI automation.
+                </p>
+              </div>
+
+              <!-- Mission / Values -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 animate-stagger-container">
+                
+                <div class="animate-stagger-item border border-brand-border rounded-xl p-5 bg-brand-bg/50">
+                  <div class="w-9 h-9 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-brand-primary mb-2">My Mission</h3>
+                  <p class="text-xs text-brand-secondary leading-relaxed">
+                    To deliver highly functional, premium-grade freelance services that help clients stand out and grow their business online.
+                  </p>
+                </div>
+
+                <div class="animate-stagger-item border border-brand-border rounded-xl p-5 bg-brand-bg/50">
+                  <div class="w-9 h-9 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                    <i data-lucide="user-check" class="w-4 h-4"></i>
+                  </div>
+                  <h3 class="text-sm font-bold text-brand-primary mb-2">My Values</h3>
+                  <p class="text-xs text-brand-secondary leading-relaxed">
+                    Clear communication, rapid turnaround times, semantic quality, clean files, and comprehensive client satisfaction.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Professional Timeline / Experience -->
+            <div class="lg:col-span-5 space-y-8">
+              <h3 class="text-lg font-display font-semibold text-brand-primary mb-6">Professional Timeline</h3>
+              
+              <div class="relative pl-6 border-l border-brand-border space-y-10">
+                
+                <!-- Item 1 -->
+                <div class="relative">
+                  <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-bg border border-brand-accent flex items-center justify-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                  </div>
+                  <span class="text-xs font-semibold text-brand-accent">2026 - Present</span>
+                  <h4 class="text-sm font-bold text-brand-primary mt-1">Freelance Frontend Developer </h4>
+                  <p class="text-xs text-brand-secondary mt-1">
+                    Providing responsive UI development, custom Figma-to-HTML mockups, to worldwide clients via Fiverr.
+                  </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative">
+                  <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-bg border border-brand-accent flex items-center justify-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                  </div>
+                  <span class="text-xs font-semibold text-brand-accent">October 2025 - December 2025</span>
+                  <h4 class="text-sm font-bold text-brand-primary mt-1">Internship - Frontend Developer</h4>
+                  <p class="text-xs text-brand-secondary mt-1">
+                    Assisted with web development tasks, created responsive web pages using HTML, CSS, JavaScript, and jQuery, and supported students during practical sessions while gaining experience in frontend development.
+                  </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative">
+                  <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-bg border border-brand-accent flex items-center justify-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-accent"></span>
+                  </div>
+                  <span class="text-xs font-semibold text-brand-accent">2023 - Present</span>
+                  <h4 class="text-sm font-bold text-brand-primary mt-1">Freelance Data Entry Specialist</h4>
+                  <p class="text-xs text-brand-secondary mt-1">
+                    Managed data cleaning, Excel spreadsheet automation, CRM updating, PDF conversions, and high-volume data entry.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services" class="py-24 border-t border-brand-border bg-brand-bg relative">
+        <div class="max-w-7xl mx-auto px-6">
+          
+          <!-- Section Header -->
+          <div class="text-center max-w-2xl mx-auto mb-12 animate-fade-up">
+            <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">My Services</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight">
+              Professional Freelance & Fiverr Services
+            </h2>
+            <p class="text-sm text-brand-secondary mt-3">
+              Explore custom tailored solutions. Use the category filters to quickly narrow down to your specific needs.
+            </p>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar animate-fade-up">
+            <button class="service-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-brand-accent text-white border-transparent" data-filter="all">All Services</button>
+            <button class="service-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="web">Web Development</button>
+            <button class="service-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="data">Data Entry & VA</button>
+            <button class="service-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="docs">Document Services</button>
+            <button class="service-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="ai">AI Services</button>
+            <button class="service-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="design">Design</button>
+          </div>
+
+          <!-- Service Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-stagger-container">
+            
+            <!-- SERVICE 1 (WEB) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="web">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="code" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">Responsive Web Development</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Creating fast, accessible, responsive websites tailored for desktops, tablets, and phones. Clean semantic code.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">HTML5/CSS3</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">JS (ES6)</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Tailwind</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$95</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+            <!-- SERVICE 2 (WEB) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="web">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="file-code" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">Figma to HTML / Tailwind</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Converting UI layouts designed in Figma, Sketch, or PSD into high-performance, responsive HTML/CSS structures.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Figma</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Tailwind CSS</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">W3C Compliant</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$60</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+            <!-- SERVICE 3 (WEB) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="web">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="zap" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">Speed & SEO Optimization</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Enhancing Lighthouse metrics. Compressing assets, minifying script bundles, setting headers, and adding metadata.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">WebDev Metrics</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Schema SEO</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Core Web Vitals</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$45</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+            <!-- SERVICE 4 (DATA) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="data">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="database" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">Data Entry & Analysis</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Comprehensive data entry, typing, copy-pasting, directory organization, and detailed cleanup of dataset sheets.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">MS Excel</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Google Sheets</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">CRM Updates</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$15</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+            <!-- SERVICE 5 (DATA) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="data">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="search" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">Virtual Assistant & Web Research</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Assisting with general back-office workflows, gathering web data, compiling reports, and sorting digital files.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Research</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Email Support</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">File Admin</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$20</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+            <!-- SERVICE 6 (DOCS) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="docs">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">Formatting & File Conversions</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Structuring Word/Excel files, resume formatting, PDF conversion, editing, and fillable form creation.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">PDF Editing</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Word Layouts</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">OCR Extraction</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$15</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+            <!-- SERVICE 7 (AI) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="ai">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="bot" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">AI Workflow Optimization</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Leveraging ChatGPT and AI prompt engineering to format content, draft templates, and automate minor research tasks.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">AI Prompts</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">ChatGPT Helper</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Workflows</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$30</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+            <!-- SERVICE 8 (DESIGN) -->
+            <div class="service-card animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm hover:shadow-md card-hover-effect transition-all" data-category="design">
+              <div class="w-10 h-10 rounded-xl bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-5">
+                <i data-lucide="palette" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-primary mb-2">Landing Page UI Design</h3>
+              <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                Prototyping clean, high-end landing page interfaces and SaaS mockups before coding. Beautiful Scandinavian layout.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mb-5">
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">UI/UX Layout</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Canva Graphics</span>
+                <span class="px-2 py-0.5 bg-brand-bg border border-brand-border text-[9px] rounded font-medium text-brand-secondary">Vibe Mockups</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-brand-border/60 pt-4 mt-auto">
+                <span class="text-[10px] text-brand-secondary">Starting at <strong class="text-xs text-brand-primary">$50</strong></span>
+                <a href="#contact" class="text-xs font-semibold text-brand-accent hover:text-brand-accent/80 flex items-center gap-1">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio" class="py-24 border-t border-brand-border bg-brand-surface dark:bg-zinc-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          
+          <!-- Section Header -->
+          <div class="text-center max-w-2xl mx-auto mb-12 animate-fade-up">
+            <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">My Portfolio</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight">
+              Recent Projects & Works Done
+            </h2>
+            <p class="text-sm text-brand-secondary mt-3">
+              Explore a collection of interactive frontend mockups demonstrating semantic markup, responsive grids, and detailed layouts.
+            </p>
+          </div>
+
+          <!-- Project Filters -->
+          <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar animate-fade-up">
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-brand-accent text-white border-transparent" data-filter="all">All Projects</button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="landing">Landing Pages</button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="portfolio">Portfolios</button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="business">Business Sites</button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="dashboard">Dashboards</button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="ui">UI Components</button>
+            <button class="portfolio-filter-btn px-4 py-2 text-xs font-semibold border rounded-full transition-all whitespace-nowrap bg-transparent text-brand-secondary border-brand-border" data-filter="app">Web Apps</button>
+          </div>
+
+          <!-- Projects Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-stagger-container">
+            
+            <!-- PROJECT 1 (DASHBOARD) -->
+            <div class="project-card animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="dashboard">
+              
+              <!-- HTML / CSS Live Dashboard Mockup Header -->
+              <div class="h-44 bg-zinc-100 dark:bg-zinc-800/80 border-b border-brand-border flex flex-col p-3 overflow-hidden select-none">
+                <div class="flex items-center gap-1.5 mb-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                </div>
+                <div class="flex flex-1 gap-2.5">
+                  <!-- Sidebar -->
+                  <div class="w-10 bg-zinc-200 dark:bg-zinc-700/60 rounded p-1.5 flex flex-col gap-1.5">
+                    <div class="h-1.5 w-full bg-brand-accent/20 rounded-full"></div>
+                    <div class="h-1 w-5 bg-zinc-300 dark:bg-zinc-600 rounded-full"></div>
+                    <div class="h-1 w-6 bg-zinc-300 dark:bg-zinc-600 rounded-full"></div>
+                    <div class="h-1 w-4 bg-zinc-300 dark:bg-zinc-600 rounded-full"></div>
+                  </div>
+                  <!-- Content -->
+                  <div class="flex-1 flex flex-col gap-2.5">
+                    <!-- Widgets -->
+                    <div class="grid grid-cols-3 gap-1.5">
+                      <div class="bg-brand-accent/5 border border-brand-accent/20 rounded p-1 flex flex-col justify-between">
+                        <span class="text-[3px] text-brand-accent font-semibold">Sales</span>
+                        <span class="text-[6px] text-brand-primary font-bold font-mono leading-none">$12.5k</span>
+                      </div>
+                      <div class="bg-zinc-200 dark:bg-zinc-700/50 rounded p-1 flex flex-col justify-between">
+                        <span class="text-[3px] text-brand-secondary">Users</span>
+                        <span class="text-[6px] text-brand-primary font-bold font-mono leading-none">1,829</span>
+                      </div>
+                      <div class="bg-zinc-200 dark:bg-zinc-700/50 rounded p-1 flex flex-col justify-between">
+                        <span class="text-[3px] text-brand-secondary">Conversion</span>
+                        <span class="text-[6px] text-brand-primary font-bold font-mono leading-none">3.4%</span>
+                      </div>
+                    </div>
+                    <!-- Mini Graph -->
+                    <div class="flex-1 bg-white dark:bg-zinc-900 rounded p-2 flex items-end gap-1 border border-brand-border/40">
+                      <div class="w-full bg-brand-accent/20 h-1/4 rounded-t-sm"></div>
+                      <div class="w-full bg-brand-accent/40 h-2/3 rounded-t-sm"></div>
+                      <div class="w-full bg-brand-accent/70 h-1/2 rounded-t-sm"></div>
+                      <div class="w-full bg-brand-accent h-5/6 rounded-t-sm"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span class="text-[10px] font-semibold text-brand-accent tracking-wider uppercase mb-1">Dashboard</span>
+                <h3 class="text-base font-bold text-brand-primary mb-2">Nexus Analytics Dashboard</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                  SaaS visualization portal built with charts, stats widgets, list panels, and a sleek modern sidebar navigation layout.
+                </p>
+                <div class="flex flex-wrap gap-1 mb-5 mt-auto">
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">React</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Tailwind CSS</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">ChartJS</span>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                  <a href="#" class="text-xs font-semibold text-brand-primary hover:text-brand-accent transition-colors flex items-center gap-1">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo
+                  </a>
+                  <a href="#" class="text-xs font-medium text-brand-secondary hover:text-brand-primary transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Github
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 2 (LANDING PAGE) -->
+            <div class="project-card animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="landing">
+              
+              <!-- HTML / CSS Live Mockup Header -->
+              <div class="h-44 bg-zinc-100 dark:bg-zinc-800/80 border-b border-brand-border flex flex-col p-3 overflow-hidden select-none">
+                <div class="flex items-center gap-1.5 mb-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                </div>
+                <div class="flex-1 flex flex-col items-center justify-center text-center p-3 bg-white dark:bg-zinc-900 rounded border border-brand-border/60 relative">
+                  <span class="text-[5px] text-brand-accent font-semibold tracking-widest uppercase mb-1">AETHER HOUSE</span>
+                  <div class="h-3 w-40 bg-zinc-800 dark:bg-zinc-200 rounded-full mb-1"></div>
+                  <div class="h-1.5 w-24 bg-zinc-400 dark:bg-zinc-500 rounded-full mb-3"></div>
+                  
+                  <div class="flex gap-1.5">
+                    <span class="w-10 h-3 bg-brand-accent rounded text-[4px] font-semibold text-white flex items-center justify-center">Get Started</span>
+                    <span class="w-10 h-3 border border-brand-border rounded text-[4px] font-semibold text-brand-secondary flex items-center justify-center">Watch Demo</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span class="text-[10px] font-semibold text-brand-accent tracking-wider uppercase mb-1">Landing Page</span>
+                <h3 class="text-base font-bold text-brand-primary mb-2">Aether Smart Landing Page</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                  Minimalist high-end Apple-inspired landing page designed for smart-home controller automation hubs.
+                </p>
+                <div class="flex flex-wrap gap-1 mb-5 mt-auto">
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">HTML5/CSS3</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">GSAP Scroll</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Lenis</span>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                  <a href="#" class="text-xs font-semibold text-brand-primary hover:text-brand-accent transition-colors flex items-center gap-1">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo
+                  </a>
+                  <a href="#" class="text-xs font-medium text-brand-secondary hover:text-brand-primary transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Github
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 3 (PORTFOLIO WEBSITES) -->
+            <div class="project-card animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="portfolio">
+              
+              <!-- HTML / CSS Live Mockup Header -->
+              <div class="h-44 bg-zinc-100 dark:bg-zinc-800/80 border-b border-brand-border flex flex-col p-3 overflow-hidden select-none">
+                <div class="flex items-center gap-1.5 mb-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                </div>
+                <div class="flex-1 bg-white dark:bg-zinc-900 rounded border border-brand-border/60 p-3 flex flex-col justify-between">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[5px] font-bold text-brand-primary">ZION OMOSANYA</span>
+                    <span class="w-3 h-3 rounded-full bg-brand-accent flex items-center justify-center text-[4px] text-white">⚙</span>
+                  </div>
+                  
+                  <div class="my-auto space-y-1">
+                    <div class="h-2 w-28 bg-zinc-800 dark:bg-zinc-200 rounded-full"></div>
+                    <div class="h-1.5 w-16 bg-brand-accent rounded-full"></div>
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-1.5">
+                    <div class="h-3 bg-zinc-100 dark:bg-zinc-800 rounded border border-brand-border/30"></div>
+                    <div class="h-3 bg-zinc-100 dark:bg-zinc-800 rounded border border-brand-border/30"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span class="text-[10px] font-semibold text-brand-accent tracking-wider uppercase mb-1">Portfolio</span>
+                <h3 class="text-base font-bold text-brand-primary mb-2">Zion Omosanya Personal Portfolio</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                  A Scandinavian-inspired portfolio showcasing multiple services, animated grids, filters, and local storage themes.
+                </p>
+                <div class="flex flex-wrap gap-1 mb-5 mt-auto">
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">HTML5/CSS3</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Tailwind v4</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Vite</span>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                  <a href="#" class="text-xs font-semibold text-brand-primary hover:text-brand-accent transition-colors flex items-center gap-1">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo
+                  </a>
+                  <a href="#" class="text-xs font-medium text-brand-secondary hover:text-brand-primary transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Github
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 4 (BUSINESS) -->
+            <div class="project-card animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="business">
+              
+              <!-- HTML / CSS Live Mockup Header -->
+              <div class="h-44 bg-zinc-100 dark:bg-zinc-800/80 border-b border-brand-border flex flex-col p-3 overflow-hidden select-none">
+                <div class="flex items-center gap-1.5 mb-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                </div>
+                <div class="flex-1 bg-white dark:bg-zinc-900 rounded border border-brand-border/60 p-2.5 flex flex-col justify-between">
+                  <div class="flex items-center justify-between border-b border-brand-border/40 pb-1.5">
+                    <span class="text-[5px] font-bold text-brand-primary">APEX FINANCIAL</span>
+                    <span class="px-1.5 py-0.5 bg-green-500/10 text-green-500 text-[3px] rounded font-semibold">Active</span>
+                  </div>
+                  <div class="space-y-1.5 my-2">
+                    <div class="flex justify-between text-[4px] text-brand-secondary">
+                      <span>Total Assets</span>
+                      <span class="font-bold text-brand-primary font-mono">$48,290.00</span>
+                    </div>
+                    <div class="h-1 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
+                      <div class="h-full bg-brand-accent w-2/3 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-[4px] text-brand-secondary border-t border-brand-border/40 pt-1.5">
+                    <span>Broker: Zion Omosanya</span>
+                    <span class="text-brand-accent font-semibold">Details →</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span class="text-[10px] font-semibold text-brand-accent tracking-wider uppercase mb-1">Business Site</span>
+                <h3 class="text-base font-bold text-brand-primary mb-2">BizBoost - Grow Your Business With Ease</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                  Modern digital marketing website built with responsive design, intuitive navigation, and conversion-focused user experience.
+                </p>
+                <div class="flex flex-wrap gap-1 mb-5 mt-auto">
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">TypeScript</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Tailwind CSS</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Vite</span>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                  <a href="#" class="text-xs font-semibold text-brand-primary hover:text-brand-accent transition-colors flex items-center gap-1">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo
+                  </a>
+                  <a href="#" class="text-xs font-medium text-brand-secondary hover:text-brand-primary transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Github
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 5 (UI COMPONENTS) -->
+            <div class="project-card animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="ui">
+              
+              <!-- HTML / CSS Live Mockup Header -->
+              <div class="h-44 bg-zinc-100 dark:bg-zinc-800/80 border-b border-brand-border flex flex-col p-3 overflow-hidden select-none">
+                <div class="flex items-center gap-1.5 mb-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                </div>
+                <div class="flex-1 flex items-center justify-center gap-2 p-2 bg-white dark:bg-zinc-900 rounded border border-brand-border/60">
+                  <div class="p-2 border border-brand-border/80 rounded bg-brand-bg flex items-center gap-1.5 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span class="text-[4px] font-bold text-brand-primary">Lumina Button</span>
+                  </div>
+                  <div class="p-2 border border-transparent rounded bg-brand-accent text-white flex items-center gap-1 shadow-sm">
+                    <span class="text-[4px] font-bold">Active Toggle</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span class="text-[10px] font-semibold text-brand-accent tracking-wider uppercase mb-1">UI Components</span>
+                <h3 class="text-base font-bold text-brand-primary mb-2">Lumina glassmorphic Elements</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                  A collection of high-end glassmorphic interactive elements, custom input buttons, and dark mode togglers.
+                </p>
+                <div class="flex flex-wrap gap-1 mb-5 mt-auto">
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">HTML5/CSS3</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Vanilla JS</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Tailwind</span>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                  <a href="#" class="text-xs font-semibold text-brand-primary hover:text-brand-accent transition-colors flex items-center gap-1">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo
+                  </a>
+                  <a href="#" class="text-xs font-medium text-brand-secondary hover:text-brand-primary transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Github
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 6 (WEB APPLICATION) -->
+            <div class="project-card animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col" data-category="app">
+              
+              <!-- HTML / CSS Live Mockup Header -->
+              <div class="h-44 bg-zinc-100 dark:bg-zinc-800/80 border-b border-brand-border flex flex-col p-3 overflow-hidden select-none">
+                <div class="flex items-center gap-1.5 mb-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                </div>
+                <div class="flex-1 bg-white dark:bg-zinc-900 rounded border border-brand-border/60 p-2.5 flex flex-col justify-between">
+                  <div class="flex items-center justify-between">
+                    <div class="h-2.5 w-16 bg-zinc-200 dark:bg-zinc-800 rounded"></div>
+                    <span class="w-4 h-4 rounded-full bg-brand-bg border border-brand-border flex items-center justify-center text-[4px]">🔍</span>
+                  </div>
+                  <div class="grid grid-cols-2 gap-2 my-2">
+                    <div class="h-10 bg-brand-accent/5 rounded border border-brand-accent/20 p-1 flex flex-col justify-between">
+                      <span class="text-[3px] text-brand-accent">Projects</span>
+                      <div class="h-1 w-10 bg-brand-accent rounded"></div>
+                    </div>
+                    <div class="h-10 bg-zinc-100 dark:bg-zinc-850 rounded p-1 flex flex-col justify-between">
+                      <span class="text-[3px] text-brand-secondary">Milestones</span>
+                      <div class="h-1 w-6 bg-zinc-300 dark:bg-zinc-700 rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Body -->
+              <div class="p-6 flex-1 flex flex-col">
+                <span class="text-[10px] font-semibold text-brand-accent tracking-wider uppercase mb-1">Web Application</span>
+                <h3 class="text-base font-bold text-brand-primary mb-2">Novasphere SaaS Planner</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed mb-4">
+                  Multi-project workspace planner dashboard featuring drag-and-drop cards and task completion counters.
+                </p>
+                <div class="flex flex-wrap gap-1 mb-5 mt-auto">
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">ReactJS</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">TypeScript</span>
+                  <span class="px-2 py-0.5 bg-brand-surface border border-brand-border text-[8px] rounded font-medium text-brand-secondary">Tailwind</span>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-brand-border/60">
+                  <a href="#" class="text-xs font-semibold text-brand-primary hover:text-brand-accent transition-colors flex items-center gap-1">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Live Demo
+                  </a>
+                  <a href="#" class="text-xs font-medium text-brand-secondary hover:text-brand-primary transition-colors flex items-center gap-1">
+                    <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg> Github
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="py-24 border-t border-brand-border bg-brand-bg relative">
+        <div class="max-w-7xl mx-auto px-6">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16 animate-fade-up">
+            <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">My Skillset</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight">
+              Technologies & Competencies
+            </h2>
+            <p class="text-sm text-brand-secondary mt-3">
+              Highly motivated in mastering front-end tech stacks, layout optimization, and comprehensive virtual assistant applications.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 animate-stagger-container">
+            
+            <!-- Category 1 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm">
+              <h3 class="text-sm font-bold text-brand-primary border-b border-brand-border pb-3 mb-4 flex items-center gap-2">
+                <i data-lucide="code" class="w-4 h-4 text-brand-accent"></i> Frontend Development
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">HTML5</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">CSS3</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Tailwind CSS</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">JavaScript</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">TypeScript</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">React</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Vite</span>
+              </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm">
+              <h3 class="text-sm font-bold text-brand-primary border-b border-brand-border pb-3 mb-4 flex items-center gap-2">
+                <i data-lucide="sliders" class="w-4 h-4 text-brand-accent"></i> Optimization & SEO
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Responsive Design</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">UI/UX Design</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Web Performance</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">SEO Basics</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Accessibility</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Figma</span>
+              </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-6 shadow-sm">
+              <h3 class="text-sm font-bold text-brand-primary border-b border-brand-border pb-3 mb-4 flex items-center gap-2">
+                <i data-lucide="database" class="w-4 h-4 text-brand-accent"></i> Virtual Assistance
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Excel / Sheets</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Data Entry</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">PDF Conversion</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Word / Docs</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">Git & GitHub</span>
+                <span class="px-3.5 py-1.5 bg-brand-bg hover:bg-brand-accent/5 hover:border-brand-accent border border-brand-border text-xs rounded-full font-medium text-brand-secondary hover:text-brand-accent transition-all cursor-default">AI Prompting</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- DEVELOPMENT PROCESS SECTION -->
+      <section id="process" class="py-24 border-t border-brand-border bg-brand-surface dark:bg-zinc-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16 animate-fade-up">
+            <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">My Workflow</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight">
+              Development & Execution Process
+            </h2>
+            <p class="text-sm text-brand-secondary mt-3">
+              How I guarantee a premium quality result from the first conversation to final website launch.
+            </p>
+          </div>
+
+          <!-- Process Timeline -->
+          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 relative animate-stagger-container">
+            
+            <!-- Step 1 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl p-5 relative">
+              <span class="text-2xl font-bold font-display text-brand-accent/25 absolute top-3 right-4">01</span>
+              <div class="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                <i data-lucide="search" class="w-4 h-4"></i>
+              </div>
+              <h3 class="text-sm font-bold text-brand-primary mb-1">Discovery</h3>
+              <p class="text-[10.5px] text-brand-secondary leading-relaxed">
+                Initial brief evaluation of objectives, target audience, layout assets, and branding requirements.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl p-5 relative">
+              <span class="text-2xl font-bold font-display text-brand-accent/25 absolute top-3 right-4">02</span>
+              <div class="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                <i data-lucide="book-open" class="w-4 h-4"></i>
+              </div>
+              <h3 class="text-sm font-bold text-brand-primary mb-1">Planning</h3>
+              <p class="text-[10.5px] text-brand-secondary leading-relaxed">
+                Designing architecture logs, sitemaps, semantic tag planning, and establishing final deadlines.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl p-5 relative">
+              <span class="text-2xl font-bold font-display text-brand-accent/25 absolute top-3 right-4">03</span>
+              <div class="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                <i data-lucide="palette" class="w-4 h-4"></i>
+              </div>
+              <h3 class="text-sm font-bold text-brand-primary mb-1">Design</h3>
+              <p class="text-[10.5px] text-brand-secondary leading-relaxed">
+                Prototyping responsive CSS components and high-end visual cards based on your guidelines.
+              </p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl p-5 relative">
+              <span class="text-2xl font-bold font-display text-brand-accent/25 absolute top-3 right-4">04</span>
+              <div class="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                <i data-lucide="code" class="w-4 h-4"></i>
+              </div>
+              <h3 class="text-sm font-bold text-brand-primary mb-1">Development</h3>
+              <p class="text-[10.5px] text-brand-secondary leading-relaxed">
+                Writing clean, well-structured, W3C compliant HTML, Tailwind CSS styling, and optimized ES6 JavaScript.
+              </p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl p-5 relative">
+              <span class="text-2xl font-bold font-display text-brand-accent/25 absolute top-3 right-4">05</span>
+              <div class="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                <i data-lucide="workflow" class="w-4 h-4"></i>
+              </div>
+              <h3 class="text-sm font-bold text-brand-primary mb-1">Testing</h3>
+              <p class="text-[10.5px] text-brand-secondary leading-relaxed">
+                Evaluating responsiveness, browser compatibility, forms, and ensuring 95+ score on Lighthouse.
+              </p>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="animate-stagger-item border border-brand-border bg-brand-bg rounded-2xl p-5 relative">
+              <span class="text-2xl font-bold font-display text-brand-accent/25 absolute top-3 right-4">06</span>
+              <div class="w-8 h-8 rounded-lg bg-brand-accent/10 flex items-center justify-center text-brand-accent mb-4">
+                <i data-lucide="check-circle" class="w-4 h-4"></i>
+              </div>
+              <h3 class="text-sm font-bold text-brand-primary mb-1">Delivery</h3>
+              <p class="text-[10.5px] text-brand-secondary leading-relaxed">
+                Deploying files to host platforms, handing over source code, and guiding theme customization.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE ME SECTION -->
+      <section id="choose-me" class="py-24 border-t border-brand-border bg-brand-bg relative">
+        <div class="max-w-7xl mx-auto px-6">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-5 space-y-6">
+              <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block animate-fade-up">Why Choose Me</span>
+              <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight animate-fade-up">
+                Dedicated to Client Success & Performance
+              </h2>
+              <p class="text-sm text-brand-secondary leading-relaxed animate-fade-up">
+                As a freelancer, my success is directly tied to the success of my clients. I focus on creating value at every step, using modern standards to keep your websites lightweight and highly structured.
+              </p>
+            </div>
+
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 animate-stagger-container">
+              
+              <!-- Card 1 -->
+              <div class="animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-5 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 mb-4">
+                  <i data-lucide="clock" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-sm font-bold text-brand-primary mb-1">Fast Delivery</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed">
+                  Fast execution speeds without cutting corners. I respect your business deadlines.
+                </p>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-5 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500 mb-4">
+                  <i data-lucide="code" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-sm font-bold text-brand-primary mb-1">Clean & Modular Code</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed">
+                  Following standard practices, clean folder organization, and semantic tags.
+                </p>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-5 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-500 mb-4">
+                  <i data-lucide="smartphone" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-sm font-bold text-brand-primary mb-1">100% Responsive</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed">
+                  Ensuring fluid scaling and layout optimization on all sizes of screens.
+                </p>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl p-5 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500 mb-4">
+                  <i data-lucide="message-square" class="w-4 h-4"></i>
+                </div>
+                <h3 class="text-sm font-bold text-brand-primary mb-1">Excellent Communication</h3>
+                <p class="text-xs text-brand-secondary leading-relaxed">
+                  Quick status updates, clear questions, and post-delivery custom support.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS SECTION -->
+      <section id="testimonials" class="py-24 border-t border-brand-border bg-brand-surface dark:bg-zinc-900 relative">
+        <div class="max-w-4xl mx-auto px-6">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16 animate-fade-up">
+            <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">Client Reviews</span>
+            <h2 class="text-3xl font-display font-bold text-brand-primary tracking-tight">
+              Testimonials From Fiverr Buyers
+            </h2>
+          </div>
+
+          <!-- Slider Container -->
+          <div class="relative overflow-hidden border border-brand-border rounded-3xl bg-brand-bg/50 p-8 sm:p-12 shadow-sm animate-fade-up">
+            
+            <div class="absolute top-6 right-8 text-brand-accent/15">
+              <i data-lucide="message-square" class="w-16 h-16"></i>
+            </div>
+            
+            <!-- Slides -->
+            <div class="testimonial-slides">
+              
+              <!-- Slide 1 -->
+              <div class="testimonial-slide flex flex-col gap-6">
+                <div class="flex items-center gap-1 text-amber-500">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-base sm:text-lg italic text-brand-primary leading-relaxed">
+                  "Zion did an exceptional job building my business landing page. He took my Figma mockup and turned it into clean, responsive HTML/Tailwind code. His communication was swift, and the website loads instantly. I highly recommend his services to anyone on Fiverr!"
+                </p>
+                <div class="flex items-center gap-4 border-t border-brand-border/60 pt-4 mt-2">
+                  <div class="w-10 h-10 rounded-full bg-brand-accent/10 border border-brand-border flex items-center justify-center font-bold text-brand-accent text-sm">
+                    JS
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-primary">John S.</h4>
+                    <span class="text-[10px] text-brand-secondary">United States | Fiverr Buyer</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 (Hidden Initially) -->
+              <div class="testimonial-slide flex flex-col gap-6 hidden">
+                <div class="flex items-center gap-1 text-amber-500">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-base sm:text-lg italic text-brand-primary leading-relaxed">
+                  "Perfect Virtual Assistant! Zion reorganized 15 massive spreadsheets containing legacy client data. He formatted our reports, edited our fillable PDFs, and converted text with high attention to detail. Fast turnaround. Will order again!"
+                </p>
+                <div class="flex items-center gap-4 border-t border-brand-border/60 pt-4 mt-2">
+                  <div class="w-10 h-10 rounded-full bg-brand-accent/10 border border-brand-border flex items-center justify-center font-bold text-brand-accent text-sm">
+                    MK
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-primary">Mariam K.</h4>
+                    <span class="text-[10px] text-brand-secondary">United Kingdom | Fiverr Buyer</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 (Hidden Initially) -->
+              <div class="testimonial-slide flex flex-col gap-6 hidden">
+                <div class="flex items-center gap-1 text-amber-500">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-base sm:text-lg italic text-brand-primary leading-relaxed">
+                  "I had a layout bug on my company portfolio that was breaking on iPhones. Zion found and resolved the CSS conflict in less than two hours. He also optimized our images, boosting our mobile score to 98%. Great communication!"
+                </p>
+                <div class="flex items-center gap-4 border-t border-brand-border/60 pt-4 mt-2">
+                  <div class="w-10 h-10 rounded-full bg-brand-accent/10 border border-brand-border flex items-center justify-center font-bold text-brand-accent text-sm">
+                    DH
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-brand-primary">Dieter H.</h4>
+                    <span class="text-[10px] text-brand-secondary">Germany | Fiverr Buyer</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Slide Navigation Buttons -->
+            <div class="flex items-center justify-end gap-3 mt-8">
+              <button class="testimonial-prev p-2.5 rounded-full border border-brand-border hover:bg-brand-surface text-brand-secondary hover:text-brand-primary transition-colors" aria-label="Previous Review">
+                <i data-lucide="arrow-right" class="w-4 h-4 rotate-180"></i>
+              </button>
+              <button class="testimonial-next p-2.5 rounded-full border border-brand-border hover:bg-brand-surface text-brand-secondary hover:text-brand-primary transition-colors" aria-label="Next Review">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STATISTICS SECTION (COUNTERS) -->
+      <section id="statistics" class="py-16 border-t border-brand-border bg-brand-accent/5 dark:bg-brand-accent/2 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center animate-stagger-container">
+            
+            <!-- Counter 1 -->
+            <div class="animate-stagger-item">
+              <span class="stat-counter text-3xl sm:text-4xl font-display font-extrabold text-brand-accent block mb-1" data-target="150" data-suffix="+">0+</span>
+              <span class="text-[10px] sm:text-xs font-semibold text-brand-secondary uppercase tracking-wider">Projects Completed</span>
+            </div>
+
+            <!-- Counter 2 -->
+            <div class="animate-stagger-item">
+              <span class="stat-counter text-3xl sm:text-4xl font-display font-extrabold text-brand-accent block mb-1" data-target="98" data-suffix="%">0%</span>
+              <span class="text-[10px] sm:text-xs font-semibold text-brand-secondary uppercase tracking-wider">Happy Clients</span>
+            </div>
+
+            <!-- Counter 3 -->
+            <div class="animate-stagger-item">
+              <span class="stat-counter text-3xl sm:text-4xl font-display font-extrabold text-brand-accent block mb-1" data-target="3" data-suffix="+">0+</span>
+              <span class="text-[10px] sm:text-xs font-semibold text-brand-secondary uppercase tracking-wider">Years Experience</span>
+            </div>
+
+            <!-- Counter 4 -->
+            <div class="animate-stagger-item">
+              <span class="stat-counter text-3xl sm:text-4xl font-display font-extrabold text-brand-accent block mb-1" data-target="95" data-suffix="+">0+</span>
+              <span class="text-[10px] sm:text-xs font-semibold text-brand-secondary uppercase tracking-wider">Positive Reviews</span>
+            </div>
+
+            <!-- Counter 5 -->
+            <div class="col-span-2 md:col-span-1 animate-stagger-item">
+              <span class="stat-counter text-3xl sm:text-4xl font-display font-extrabold text-brand-accent block mb-1" data-target="15" data-suffix="+">0+</span>
+              <span class="text-[10px] sm:text-xs font-semibold text-brand-secondary uppercase tracking-wider">Tech Mastered</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section id="faq" class="py-24 border-t border-brand-border bg-brand-bg relative">
+        <div class="max-w-3xl mx-auto px-6">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16 animate-fade-up">
+            <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">Common Questions</span>
+            <h2 class="text-3xl font-display font-bold text-brand-primary tracking-tight">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div class="space-y-4 animate-stagger-container">
+            
+            <!-- Accordion 1 -->
+            <div class="faq-item animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl overflow-hidden">
+              <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none hover:bg-brand-bg/50 transition-colors">
+                <span class="text-xs font-bold text-brand-primary">How long does a website development project take?</span>
+                <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-secondary transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-6 pb-5 text-xs text-brand-secondary leading-relaxed border-t border-brand-border/40 pt-4">
+                Typically, a standard landing page takes 3-5 business days. A fully customized multi-section portfolio or corporate website ranges between 1 to 2 weeks depending on features, layouts, and review updates.
+              </div>
+            </div>
+
+            <!-- Accordion 2 -->
+            <div class="faq-item animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl overflow-hidden">
+              <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none hover:bg-brand-bg/50 transition-colors">
+                <span class="text-xs font-bold text-brand-primary">Do you redesign existing websites?</span>
+                <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-secondary transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-6 pb-5 text-xs text-brand-secondary leading-relaxed border-t border-brand-border/40 pt-4">
+                Yes! I can take your current website, analyze its performance bottlenecks, audit visual conflicts, and rebuild it using optimized code to improve mobile responsiveness, load speeds, and layout aesthetics.
+              </div>
+            </div>
+
+            <!-- Accordion 3 -->
+            <div class="faq-item animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl overflow-hidden">
+              <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none hover:bg-brand-bg/50 transition-colors">
+                <span class="text-xs font-bold text-brand-primary">Can you convert Figma designs into pixel-perfect HTML?</span>
+                <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-secondary transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-6 pb-5 text-xs text-brand-secondary leading-relaxed border-t border-brand-border/40 pt-4">
+                Yes, this is one of my primary Figma services. I convert Figma designs (as well as Adobe XD or PSD) into responsive, hand-written HTML and Tailwind CSS files. All code is validated and optimized.
+              </div>
+            </div>
+
+            <!-- Accordion 4 -->
+            <div class="faq-item animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl overflow-hidden">
+              <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none hover:bg-brand-bg/50 transition-colors">
+                <span class="text-xs font-bold text-brand-primary">Do you provide revision periods?</span>
+                <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-secondary transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-6 pb-5 text-xs text-brand-secondary leading-relaxed border-t border-brand-border/40 pt-4">
+                Yes! Fiverr gigs and direct projects include revision packages. We adjust colors, typography, element spacing, and assets until the final deliverable matches your specifications.
+              </div>
+            </div>
+
+            <!-- Accordion 5 -->
+            <div class="faq-item animate-stagger-item border border-brand-border bg-brand-surface rounded-2xl overflow-hidden">
+              <button class="faq-trigger w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none hover:bg-brand-bg/50 transition-colors">
+                <span class="text-xs font-bold text-brand-primary">Can I hire you for long-term virtual assistance or developer contracts?</span>
+                <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-brand-secondary transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content hidden px-6 pb-5 text-xs text-brand-secondary leading-relaxed border-t border-brand-border/40 pt-4">
+                Absolutely. I offer monthly data management support, routine site bug-fixing maintenance, CRM management, spreadsheet cleanup, and file handling. Feel free to message me to details!
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="py-24 border-t border-brand-border bg-brand-surface dark:bg-zinc-900 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <!-- Contact Details -->
+            <div class="lg:col-span-5 space-y-8 animate-fade-up">
+              <div>
+                <span class="text-sm font-semibold tracking-wider text-brand-accent uppercase mb-2 block">Get in Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight">
+                  Let's Discuss Your Project Goals
+                </h2>
+                <p class="text-sm text-brand-secondary mt-3 leading-relaxed">
+                  Have an application idea, design layout, or virtual administrative workload? Message me here or hire me directly through Fiverr!
+                </p>
+              </div>
+
+              <div class="space-y-6">
+                
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-brand-bg border border-brand-border flex items-center justify-center text-brand-accent">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-brand-secondary block uppercase font-bold tracking-wider">Email Address</span>
+                    <a href="mailto:zion.freelancer@example.com" class="text-xs font-bold text-brand-primary hover:text-brand-accent transition-colors">zion.freelancer@example.com</a>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-brand-bg border border-brand-border flex items-center justify-center text-brand-accent">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-brand-secondary block uppercase font-bold tracking-wider">WhatsApp Contact</span>
+                    <span class="text-xs font-bold text-brand-primary">+1 (555) 234-5678</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                  <div class="w-10 h-10 rounded-xl bg-brand-bg border border-brand-border flex items-center justify-center text-brand-accent">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-brand-secondary block uppercase font-bold tracking-wider">Work Location</span>
+                    <span class="text-xs font-bold text-brand-primary">Lagos, Nigeria (GMT+1)</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Social links -->
+              <div class="pt-4 space-y-4">
+                <h4 class="text-xs font-bold text-brand-primary uppercase tracking-wider">Follow & Connect</h4>
+                <div class="flex items-center gap-3">
+                  <a href="https://github.com/heyy-zi0n" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-brand-border bg-brand-bg text-brand-secondary hover:text-brand-accent hover:border-brand-accent transition-all flex items-center justify-center" aria-label="GitHub Profile">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                  </a>
+                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-brand-border bg-brand-bg text-brand-secondary hover:text-brand-accent hover:border-brand-accent transition-all flex items-center justify-center" aria-label="LinkedIn Profile">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  </a>
+                  <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-brand-border bg-brand-bg text-brand-secondary hover:text-brand-accent hover:border-brand-accent transition-all" aria-label="X Profile">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="lg:col-span-7 animate-fade-up">
+              <!-- Using FormSubmit AJAX endpoint -->
+              <form id="contact-form" action="https://formsubmit.co/ajax/zionomosanya485@gmail.com" method="POST" class="space-y-6 border border-brand-border bg-brand-bg/40 rounded-3xl p-6 sm:p-8 shadow-sm">
+                
+                <!-- Anti-spam honeypot -->
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Disable email confirmation redirects -->
+                <input type="hidden" name="_next" value="">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-[10px] font-bold text-brand-secondary uppercase tracking-wider mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-brand-surface text-brand-primary placeholder:text-brand-secondary/50 focus:border-brand-accent focus:outline-none text-xs transition-colors">
+                  </div>
+                  <div>
+                    <label for="email" class="block text-[10px] font-bold text-brand-secondary uppercase tracking-wider mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-brand-surface text-brand-primary placeholder:text-brand-secondary/50 focus:border-brand-accent focus:outline-none text-xs transition-colors">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-[10px] font-bold text-brand-secondary uppercase tracking-wider mb-2">Project Subject</label>
+                  <input type="text" id="subject" name="subject" placeholder="Web Development / Virtual Assistance Gig" class="w-full px-4 py-3 rounded-xl border border-brand-border bg-brand-surface text-brand-primary placeholder:text-brand-secondary/50 focus:border-brand-accent focus:outline-none text-xs transition-colors">
+                </div>
+
+                <div>
+                  <label for="message" class="block text-[10px] font-bold text-brand-secondary uppercase tracking-wider mb-2">Project Message</label>
+                  <textarea id="message" name="message" rows="5" required placeholder="Hi Zion, I have a project mapping in Figma..." class="w-full px-4 py-3 rounded-xl border border-brand-border bg-brand-surface text-brand-primary placeholder:text-brand-secondary/50 focus:border-brand-accent focus:outline-none text-xs transition-colors resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accent/95 text-white font-semibold py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md shadow-brand-accent/15">
+                  <span class="submit-text text-xs">Send Message</span>
+                  <i data-lucide="send" class="submit-icon w-3.5 h-3.5"></i>
+                </button>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-16 border-t border-brand-border bg-brand-bg relative">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-12">
+          
+          <div class="md:col-span-6 space-y-4">
+            <span class="text-lg font-display font-bold tracking-tight text-brand-primary flex items-center gap-2">
+              <span class="w-7 h-7 rounded bg-brand-accent flex items-center justify-center text-white text-xs">Z</span>
+              Zion <span class="text-brand-accent">Omosanya</span>
+            </span>
+            <p class="text-xs text-brand-secondary max-w-sm leading-relaxed">
+              Premium freelance development, data entry, document formatting, and virtual assistant services tailored to client workflows worldwide.
+            </p>
+          </div>
+
+          <div class="md:col-span-3 space-y-3">
+            <h4 class="text-[10px] font-bold text-brand-primary uppercase tracking-wider">Quick Links</h4>
+            <div class="flex flex-col gap-2">
+              <a href="#home" class="text-xs text-brand-secondary hover:text-brand-accent transition-colors">Home</a>
+              <a href="#about" class="text-xs text-brand-secondary hover:text-brand-accent transition-colors">About</a>
+              <a href="#services" class="text-xs text-brand-secondary hover:text-brand-accent transition-colors">Services</a>
+              <a href="#portfolio" class="text-xs text-brand-secondary hover:text-brand-accent transition-colors">Portfolio</a>
+            </div>
+          </div>
+
+          <div class="md:col-span-3 space-y-3">
+            <h4 class="text-[10px] font-bold text-brand-primary uppercase tracking-wider">Fiverr Profile</h4>
+            <div class="flex flex-col gap-2">
+              <a href="https://www.fiverr.com/ziondatapro?public_mode=true" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-secondary hover:text-brand-accent transition-colors">Fiverr Services</a>
+              <a href="#faq" class="text-xs text-brand-secondary hover:text-brand-accent transition-colors">FAQs</a>
+              <a href="#contact" class="text-xs text-brand-secondary hover:text-brand-accent transition-colors">Hire Directly</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between border-t border-brand-border/60 pt-8 gap-4">
+          <p class="text-[10px] text-brand-secondary">
+            &copy; 2026 Zion Omosanya. All rights reserved. Designed with intention.
+          </p>
+          
+          <p class="text-[10px] text-brand-secondary flex items-center gap-1.5">
+            Built with Vite & Tailwind CSS
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Back to Top Button -->
+      <button id="back-to-top" class="fixed bottom-8 right-8 w-10 h-10 flex items-center justify-center rounded-full bg-brand-accent text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-110 opacity-0 pointer-events-none z-50" aria-label="Back to top">
+        <i data-lucide="arrow-up" class="w-4 h-4"></i>
+      </button>
+    </footer>
+
+    <!-- Main JS Bundle -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
