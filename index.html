@@ -546,7 +546,7 @@
 
     <!-- Projects Grid (3 in a row on lg screens, total of 6 cards) -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-stagger-container">
-      
+
       <!-- PROJECT 1: BIZBOOST (READY) -->
       <div class="group relative rounded-3xl overflow-hidden border border-brand-border bg-zinc-950 aspect-[4/5] sm:aspect-[4/3] lg:aspect-[3/4] flex flex-col justify-between p-6 sm:p-8 text-white transition-all duration-500 hover:shadow-xl hover:border-brand-accent/50" data-category="business">
         <!-- Background Screenshot / Image Preview -->
@@ -638,23 +638,34 @@
         </div>
       </div>
 
-      <!-- PROJECT 4: NEXUS ANALYTICS (COMING SOON) -->
-      <div class="group relative rounded-3xl overflow-hidden border border-dashed border-brand-border bg-zinc-950/40 aspect-[4/5] sm:aspect-[4/3] lg:aspect-[3/4] flex flex-col justify-between p-6 sm:p-8 text-white transition-all duration-500 opacity-60" data-category="dashboard">
-        <div class="relative z-10 flex items-center justify-between">
-          <span class="text-[11px] font-bold tracking-widest text-brand-secondary uppercase">DASHBOARD / SAAS</span>
-          <span class="px-3 py-1 rounded-full bg-brand-surface border border-brand-border text-[10px] font-semibold text-brand-accent">COMING SOON</span>
+      <!-- PROJECT 4: LASU FOCITECMS (READY) -->
+      <div class="group relative rounded-3xl overflow-hidden border border-brand-border bg-zinc-950 aspect-[4/5] sm:aspect-[4/3] lg:aspect-[3/4] flex flex-col justify-between p-6 sm:p-8 text-white transition-all duration-500 hover:shadow-xl hover:border-brand-accent/50" data-category="app">
+        <!-- Background Screenshot / Image Preview -->
+        <div class="absolute inset-0 z-0 bg-zinc-900 overflow-hidden">
+          <img src="src/assets/focitecms-screenshot.png" alt="LASU FCIT System Preview" class="w-full h-full object-cover object-top opacity-30 group-hover:scale-105 group-hover:opacity-20 transition-all duration-700 ease-out" />
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-zinc-950/40"></div>
+        </div>
+
+        <div class="relative z-10">
+          <span class="text-[11px] font-bold tracking-widest text-brand-accent uppercase">SECURITY / GOVERNANCE APP</span>
         </div>
 
         <div class="relative z-10 space-y-4">
-          <h3 class="text-xl sm:text-2xl font-bold text-zinc-400 tracking-tight leading-tight">Nexus Analytics Dashboard</h3>
-          <p class="text-xs sm:text-sm text-brand-secondary leading-relaxed">
-            SaaS visualization portal built with charts, stats widgets, list panels, and modern navigation layout.
+          <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight leading-tight">LASU FCIT FOCITECMS</h3>
+          <p class="text-xs sm:text-sm text-zinc-300 line-clamp-2 leading-relaxed">
+            A state-of-the-art secure examination management system featuring AES-256-GCM cryptographic document lockdown and strict RBAC dual-approval governance.
           </p>
 
-          <div class="pt-2 flex items-center gap-4">
-            <span class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-brand-surface border border-brand-border text-brand-secondary font-bold text-xs uppercase tracking-wider cursor-not-allowed select-none">
-              In Development
-            </span>
+          <div class="flex flex-wrap items-center gap-1.5 pt-1">
+            <span class="px-2.5 py-0.5 rounded-full bg-zinc-900/90 border border-brand-border text-[11px] font-medium text-zinc-200 backdrop-blur-sm">PHP 8+</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-zinc-900/90 border border-brand-border text-[11px] font-medium text-zinc-200 backdrop-blur-sm">MySQL</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-zinc-900/90 border border-brand-border text-[11px] font-medium text-zinc-200 backdrop-blur-sm">Tailwind</span>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center gap-3">
+            <a href="case-study-focitecms.html" class="inline-flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-brand-accent hover:bg-brand-accent/90 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md hover:scale-[1.02]">
+              Case Study <span>&rarr;</span>
+            </a>
           </div>
         </div>
       </div>
