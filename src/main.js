@@ -42,7 +42,11 @@ import {
   Workflow,
   Sliders,
   Search,
-  BookOpen
+  BookOpen,
+  ArrowLeft,
+  ShieldCheck,
+  Users,
+  FileCheck2
 } from 'lucide';
 
 // Register GSAP ScrollTrigger plugin
@@ -92,7 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
       Workflow,
       Sliders,
       Search,
-      BookOpen
+      BookOpen,
+      ArrowLeft,
+      ShieldCheck,
+      Users,
+      FileCheck2
     }
   });
 
