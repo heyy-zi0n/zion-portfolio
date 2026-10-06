@@ -48,7 +48,7 @@ export function MobileNav() {
     <div className="md:hidden flex items-center">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="z-50 relative text-sm lowercase text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm p-1"
+        className="z-50 relative text-[13px] lowercase text-[var(--foreground)] opacity-70 hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm p-1"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         aria-label="Toggle menu"

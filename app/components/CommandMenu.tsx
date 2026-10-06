@@ -120,11 +120,10 @@ export function CommandMenu() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="hidden md:flex items-center text-xs text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors px-2 py-1 rounded-md bg-[var(--muted)]/50 hover:bg-[var(--muted)] border border-[var(--border)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)]"
+        className="hidden md:flex items-center text-[11px] font-medium text-[var(--foreground)] opacity-70 hover:opacity-100 transition-colors px-1.5 py-0.5 rounded border border-[var(--border)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] tracking-widest uppercase bg-[var(--background)]"
         aria-label="Open command menu"
       >
-        <Search size={14} className="mr-2" />
-        <span>{navigator.userAgent.includes("Mac") ? "⌘K" : "ctrl K"}</span>
+        <span>{navigator.userAgent.includes("Mac") ? "⌘K" : "CTRL K"}</span>
       </button>
       
       <button

@@ -18,7 +18,11 @@
     "jsx": "react-jsx",
     "paths": {
       "~/*": ["./app/*"]
-    }
+    },
+    "rootDirs": [
+      ".",
+      "./.react-router/types"
+    ]
   },
   "include": [
     "**/*.ts",
