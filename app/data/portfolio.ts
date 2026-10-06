@@ -165,7 +165,7 @@ export const PROJECTS: Project[] = [
     fullTitle: "Intelligent Context-Aware Photo Enhancement System",
     description: "A context-aware photo enhancement application that analyzes image characteristics and selects appropriate enhancement operations instead of applying one fixed filter to every image.",
     techUsed: ["Python", "Flask", "OpenCV", "scikit-image", "NumPy", "Pillow", "MySQL", "JavaScript"],
-    img: "/images/projects/icapes.svg",
+    img: "/images/projects/icapes.png",
     caseStudy: {
       problem: "Generic enhancement pipelines often apply similar adjustments to every photo even though exposure, contrast, noise, sharpness and saturation problems vary significantly between images.",
       decisions: [

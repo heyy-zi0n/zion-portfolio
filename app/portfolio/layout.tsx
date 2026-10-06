@@ -9,7 +9,7 @@ export default function PortfolioLayout() {
     <div className="min-h-screen flex flex-col items-center">
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--background)]/80 backdrop-blur-md">
         <div className="flex w-full items-center justify-between px-3 py-2">
-          <Link to="/" className="text-sm font-medium tracking-tight hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">
+          <Link to="/" className="nav-link text-sm font-medium tracking-tight focus-visible:outline-none">
             heyy.zi0n
           </Link>
 
@@ -22,7 +22,7 @@ export default function PortfolioLayout() {
                     key={item}
                     to={path}
                     className={({ isActive }) => cn(
-                      "text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm",
+                      "nav-link text-sm focus-visible:outline-none",
                       isActive ? "text-[var(--foreground)] font-medium" : "text-[var(--foreground)] opacity-70 hover:opacity-100"
                     )}
                   >
