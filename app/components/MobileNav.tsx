@@ -62,41 +62,43 @@ export function MobileNav() {
       <div
         id="mobile-menu"
         className={cn(
-          "fixed inset-0 z-40 bg-[var(--background)]/50 backdrop-blur-md backdrop-saturate-150 flex flex-col justify-center px-8 clip-circle",
+          "fixed inset-0 z-40 bg-[var(--background)] flex flex-col h-[100dvh] min-h-[100dvh] w-full clip-circle",
           isOpen ? "open" : "pointer-events-none"
         )}
       >
-        <nav aria-label="Mobile Navigation" className="flex flex-col w-full max-w-sm mx-auto mt-12">
-          {NAV_ITEMS.map((item, i) => {
-            const isActive = location.pathname === item.href || (item.href === '/projects' && location.pathname.startsWith('/projects'));
-            
-            return (
-              <div 
-                key={item.href}
-                className="border-b border-[var(--border)] overflow-hidden"
-                style={{
-                  transitionDelay: isOpen ? `${100 + i * 60}ms` : "0ms",
-                  opacity: isOpen ? 1 : 0,
-                  transform: isOpen ? "translateY(0)" : "translateY(20px)",
-                  transition: "opacity 400ms ease-out, transform 400ms ease-out"
-                }}
-              >
-                <Link
-                  to={item.href}
-                  className="flex items-center justify-between py-6 text-4xl font-light hover:text-[var(--muted-foreground)] transition-colors focus-visible:outline-none focus-visible:bg-[var(--muted)]/50 rounded-sm"
-                  onClick={() => setIsOpen(false)}
+        <div className="flex-1" />
+        <nav aria-label="Mobile Navigation" className="w-full px-3 pb-[15vh]">
+          <div className="border-t border-[var(--border)]">
+            {NAV_ITEMS.map((item, i) => {
+              const isActive = location.pathname === item.href || (item.href === '/projects' && location.pathname.startsWith('/projects'));
+              
+              return (
+                <div 
+                  key={item.href}
+                  className="border-b border-[var(--border)] overflow-hidden"
+                  style={{
+                    transitionDelay: isOpen ? `${120 + i * 60}ms` : "0ms",
+                    opacity: isOpen ? 1 : 0,
+                    transform: isOpen ? "translateY(0)" : "translateY(20px)",
+                    transition: "opacity 400ms ease-out, transform 400ms ease-out"
+                  }}
                 >
-                  <span className="text-[var(--muted-foreground)] text-sm self-start mt-2 mr-6 font-medium">
-                    0{i + 1}
-                  </span>
-                  <span className={cn("flex-1", isActive ? "font-normal text-[var(--foreground)]" : "text-[var(--foreground)]")}>
-                    {item.label}
-                  </span>
-                  {isActive && <span className="w-2 h-2 rounded-full bg-[var(--foreground)]" />}
-                </Link>
-              </div>
-            );
-          })}
+                  <Link
+                    to={item.href}
+                    className="grid grid-cols-[2rem_1fr_auto] items-center py-4 hover:translate-x-1 focus-visible:translate-x-1 focus-visible:outline-none transition-transform duration-300"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span className="text-[var(--muted-foreground)] text-xs font-medium self-center">
+                      0{i + 1}
+                    </span>
+                    <span className={cn("text-4xl font-light", isActive ? "text-[var(--foreground)]" : "text-[var(--foreground)] opacity-90")}>
+                      {item.label}
+                    </span>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </nav>
       </div>
     </div>

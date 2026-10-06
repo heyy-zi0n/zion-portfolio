@@ -1,15 +1,21 @@
-import { Link, NavLink, Outlet } from "react-router";
+import { Link, NavLink, Outlet, useLocation } from "react-router";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { CommandMenu } from "../components/CommandMenu";
 import { MobileNav } from "../components/MobileNav";
 import { cn } from "../lib/utils";
 
 export default function PortfolioLayout() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
-    <div className="min-h-screen flex flex-col items-center">
+    <div className={cn(
+      "flex flex-col items-center w-full",
+      isHome ? "h-[100dvh] min-h-[100dvh] overflow-hidden" : "min-h-[100dvh]"
+    )}>
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--background)]/80 backdrop-blur-md">
         <div className="flex w-full items-center justify-between px-3 py-2">
-          <Link to="/" className="nav-link text-sm font-medium tracking-tight focus-visible:outline-none">
+          <Link to="/" className="nav-link text-sm font-medium tracking-tight focus-visible:outline-none relative z-50">
             heyy.zi0n
           </Link>
 
@@ -32,9 +38,13 @@ export default function PortfolioLayout() {
               })}
             </nav>
 
-            <div className="flex items-center gap-2">
-              <CommandMenu />
-              <ThemeToggle />
+            <div className="flex items-center gap-2 has-[#mobile-menu.open]:[&>.cmd-wrapper]:hidden">
+              <div className="cmd-wrapper">
+                <CommandMenu />
+              </div>
+              <div className="relative z-50">
+                <ThemeToggle />
+              </div>
               <MobileNav />
             </div>
           </div>
