@@ -16,7 +16,7 @@ export default function Home() {
       </p>
       
       <p className="text-[var(--muted-foreground)] text-sm md:text-base font-light leading-relaxed">
-        Currently studying Computer Science at LASU FCIT while building across <Link to="/experience" className="link-highlight font-medium">frontend development</Link>, PHP/MySQL applications, and Python/Flask systems.
+        Currently studying Computer Science at <a href="https://lasu.infy.click/" target="_blank" rel="noopener noreferrer" className="link-highlight font-medium">LASU FCIT</a> while building across <Link to="/experience" className="link-highlight font-medium">frontend development</Link>, PHP/MySQL applications, and Python/Flask systems.
       </p>
 
       <div className="mt-1 flex flex-col gap-2.5 md:hidden">
