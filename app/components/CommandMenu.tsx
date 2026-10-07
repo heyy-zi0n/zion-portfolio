@@ -124,7 +124,7 @@ export function CommandMenu() {
         className="md:hidden w-8 h-8 grid place-items-center bg-transparent border-0 text-[var(--foreground)] transition-opacity focus-visible:outline-none"
         aria-label="Open command menu"
       >
-        <Search size={22} strokeWidth={1.7} />
+        <Search size={16} strokeWidth={1.7} />
       </button>
 
       <dialog

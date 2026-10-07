@@ -48,12 +48,12 @@ export function MobileNav() {
     <div className="md:hidden flex items-center">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="z-50 relative text-[20px] font-normal leading-none lowercase text-[var(--foreground)] bg-transparent border-0 focus-visible:outline-none"
+        className="z-50 relative text-sm font-normal leading-none lowercase text-[var(--foreground)] bg-transparent border-0 focus-visible:outline-none"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         aria-label="Toggle menu"
       >
-        <span className="relative inline-block w-[52px] h-[20px] overflow-hidden">
+        <span className="relative inline-block w-[38px] h-[14px] overflow-hidden">
           <span className={cn("absolute inset-0 flex items-center justify-center transition-transform duration-300", isOpen ? "-translate-y-full" : "translate-y-0")}>menu</span>
           <span className={cn("absolute inset-0 flex items-center justify-center transition-transform duration-300", isOpen ? "translate-y-0" : "translate-y-full")}>close</span>
         </span>
