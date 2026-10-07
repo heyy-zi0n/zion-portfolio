@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { Search } from "lucide-react";
 import { PROJECTS, SOCIAL_LINKS } from "../data/portfolio";
 import { cn } from "../lib/utils";
+import { useTheme } from "./ThemeProvider";
 
 type CommandItem = {
   id: string;
@@ -18,6 +19,7 @@ export function CommandMenu() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+  const { toggleTheme } = useTheme();
 
   const handleClose = () => {
     setIsOpen(false);
@@ -78,16 +80,7 @@ export function CommandMenu() {
       label: "switch theme",
       group: "ACTIONS",
       onSelect: () => {
-        const isDark = document.documentElement.classList.contains("dark");
-        if (isDark) {
-          document.documentElement.classList.remove("dark");
-          document.documentElement.style.colorScheme = "light";
-          localStorage.setItem("theme", "light");
-        } else {
-          document.documentElement.classList.add("dark");
-          document.documentElement.style.colorScheme = "dark";
-          localStorage.setItem("theme", "dark");
-        }
+        toggleTheme();
       }
     }
   ];
@@ -128,10 +121,10 @@ export function CommandMenu() {
       
       <button
         onClick={() => setIsOpen(true)}
-        className="md:hidden p-1.5 rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)]"
+        className="md:hidden w-8 h-8 grid place-items-center bg-transparent border-0 text-[var(--foreground)] transition-opacity focus-visible:outline-none"
         aria-label="Open command menu"
       >
-        <Search size={18} />
+        <Search size={22} strokeWidth={1.7} />
       </button>
 
       <dialog

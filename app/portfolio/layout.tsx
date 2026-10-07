@@ -14,8 +14,8 @@ export default function PortfolioLayout() {
       isHome ? "h-[100dvh] min-h-[100dvh] overflow-hidden" : "min-h-[100dvh]"
     )}>
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--background)]/80 backdrop-blur-md">
-        <div className="flex w-full items-center justify-between px-3 py-2">
-          <Link to="/" className="nav-link text-sm font-medium tracking-tight focus-visible:outline-none relative z-50">
+        <div className="flex w-full items-center justify-between px-5 md:px-3 h-[80px] md:h-auto md:py-2">
+          <Link to="/" className="text-[20px] font-normal md:nav-link md:text-sm md:font-medium tracking-tight focus-visible:outline-none relative z-50">
             heyy.zi0n
           </Link>
 
@@ -38,7 +38,7 @@ export default function PortfolioLayout() {
               })}
             </nav>
 
-            <div className="flex items-center gap-2 has-[#mobile-menu.open]:[&>.cmd-wrapper]:hidden">
+            <div className="flex items-center gap-7 md:gap-2 has-[#mobile-menu.open]:[&>.cmd-wrapper]:hidden">
               <div className="cmd-wrapper">
                 <CommandMenu />
               </div>

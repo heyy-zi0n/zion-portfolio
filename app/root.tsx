@@ -44,6 +44,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { ThemeProvider } from "./components/ThemeProvider";
+
 export default function App() {
-  return <Outlet />;
+  return (
+    <ThemeProvider>
+      <Outlet />
+    </ThemeProvider>
+  );
 }
