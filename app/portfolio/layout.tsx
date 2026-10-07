@@ -15,8 +15,8 @@ export default function PortfolioLayout() {
     )}>
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--background)]/80 backdrop-blur-md">
         <div className="flex w-full items-center justify-between px-3 h-[44px] md:h-auto md:py-2">
-          <Link to="/" className="text-sm font-normal md:nav-link md:font-medium tracking-tight focus-visible:outline-none relative z-50">
-            heyy.zi0n
+          <Link to="/" className="text-sm font-normal md:nav-link md:font-medium tracking-tight text-[var(--foreground)] opacity-70 hover:opacity-100 focus-visible:outline-none relative z-50">
+            heyy.zion
           </Link>
 
           <div className="flex items-center gap-4 md:gap-6">
@@ -60,7 +60,7 @@ export default function PortfolioLayout() {
       <footer className="fixed bottom-0 left-0 right-0 z-40 w-full flex justify-center py-2 px-3 pointer-events-none">
         <div className="absolute bottom-0 left-0 right-0 h-24 -z-10 bg-gradient-to-t from-[var(--background)] to-transparent pointer-events-none" />
         <p className="text-xs text-[var(--foreground)] opacity-70 pointer-events-auto">
-          © {new Date().getFullYear()} — <Link to="/contact" className="hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">heyy.zi0n</Link>
+          © {new Date().getFullYear()} — <Link to="/contact" className="hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">heyy.zion</Link>
         </p>
       </footer>
     </div>

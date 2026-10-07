@@ -1,6 +1,8 @@
 import { Breadcrumb } from "../components/Breadcrumb";
-import { EXPERIENCES } from "../data/portfolio";
+import { EXPERIENCES, HAS_CV } from "../data/portfolio";
 import { generateMeta } from "../lib/meta";
+import { ArrowDownRight } from "lucide-react";
+import { cn } from "../lib/utils";
 
 export function meta() {
   return generateMeta(
@@ -14,7 +16,19 @@ export default function Experience() {
     <div className="animate-in fade-in duration-500 slide-in-from-bottom-2">
       <Breadcrumb items={[{ label: "about me", href: "/about" }, { label: "career" }]} />
       
-      <div className="flex flex-col gap-12 mt-8">
+      {HAS_CV && (
+        <div className="mt-8">
+          <a
+            href="/zion-faith-omosanya-cv.pdf"
+            download="Zion-faith-Pelumi-Omosanya-CV.pdf"
+            className="link-sweep text-sm font-light text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors inline-flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm pb-0.5"
+          >
+            download my cv <ArrowDownRight size={14} strokeWidth={1.5} />
+          </a>
+        </div>
+      )}
+      
+      <div className={cn("flex flex-col gap-12", HAS_CV ? "mt-10" : "mt-8")}>
         {EXPERIENCES.map((exp, index) => (
           <div key={exp.id} className="relative">
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">

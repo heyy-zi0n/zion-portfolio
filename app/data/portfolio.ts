@@ -6,6 +6,8 @@ export type SocialLink = {
   target?: "_self" | "_blank";
 };
 
+export const HAS_CV = false;
+
 export type ExperienceRole = {
   id: number;
   title: string;

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 import { Search } from "lucide-react";
-import { PROJECTS, SOCIAL_LINKS } from "../data/portfolio";
+import { PROJECTS, SOCIAL_LINKS, HAS_CV } from "../data/portfolio";
 import { cn } from "../lib/utils";
 import { useTheme } from "./ThemeProvider";
 
@@ -74,6 +74,17 @@ export function CommandMenu() {
         else window.location.href = s.url;
       }
     })),
+    ...(HAS_CV ? [{
+      id: "download-cv",
+      label: "download my cv",
+      group: "ACTIONS",
+      onSelect: () => {
+        const a = document.createElement('a');
+        a.href = "/zion-faith-omosanya-cv.pdf";
+        a.download = "Zion-faith-Pelumi-Omosanya-CV.pdf";
+        a.click();
+      }
+    }] : []),
     
     {
       id: "theme",
