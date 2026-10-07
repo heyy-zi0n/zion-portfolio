@@ -15,7 +15,7 @@ export default function PortfolioLayout() {
     )}>
       <header className="fixed top-0 left-0 right-0 z-50 w-full bg-[var(--background)]/80 backdrop-blur-md">
         <div className="flex w-full items-center justify-between px-3 h-[44px] md:h-auto md:py-2">
-          <Link to="/" className="text-sm font-normal md:nav-link md:font-medium tracking-tight text-[var(--foreground)] opacity-70 hover:opacity-100 focus-visible:outline-none relative z-50">
+          <Link to="/" reloadDocument className="text-sm font-normal md:nav-link md:font-medium tracking-tight text-[var(--foreground)] focus-visible:outline-none relative z-50">
             heyy.zion
           </Link>
 
