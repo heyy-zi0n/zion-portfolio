@@ -19,16 +19,16 @@ export default function Home() {
         Currently studying Computer Science at LASU FCIT while building across <Link to="/experience" className="link-highlight font-medium">frontend development</Link>, PHP/MySQL applications, and Python/Flask systems.
       </p>
 
-      <div className="mt-2 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 text-[0.875rem] font-normal">
-        <span className="text-[var(--foreground)] opacity-50 tracking-wide">explore</span>
-        <nav className="flex flex-wrap items-center gap-3">
-          <Link to="/about" className="link-sweep text-[var(--foreground)] opacity-75 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">about</Link>
+      <div className="mt-1 flex flex-col gap-2.5 md:hidden">
+        <span className="text-sm font-semibold text-[var(--foreground)] opacity-90">Explore</span>
+        <nav className="flex flex-wrap items-center gap-3 text-sm">
+          <Link to="/about" className="link-sweep text-[var(--foreground)] opacity-70 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">about</Link>
           <span className="text-[var(--foreground)] opacity-30 select-none">·</span>
-          <Link to="/projects" className="link-sweep text-[var(--foreground)] opacity-75 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">projects</Link>
+          <Link to="/projects" className="link-sweep text-[var(--foreground)] opacity-70 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">projects</Link>
           <span className="text-[var(--foreground)] opacity-30 select-none">·</span>
-          <Link to="/experience" className="link-sweep text-[var(--foreground)] opacity-75 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">career</Link>
+          <Link to="/experience" className="link-sweep text-[var(--foreground)] opacity-70 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">career</Link>
           <span className="text-[var(--foreground)] opacity-30 select-none">·</span>
-          <Link to="/contact" className="link-sweep text-[var(--foreground)] opacity-75 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">connect</Link>
+          <Link to="/contact" className="link-sweep text-[var(--foreground)] opacity-70 hover:opacity-100 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm">connect</Link>
         </nav>
       </div>
     </div>
