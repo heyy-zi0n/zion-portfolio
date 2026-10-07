@@ -31,11 +31,14 @@ export function CommandMenu() {
     if (!dialog) return;
     
     if (isOpen) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       dialog.showModal();
       document.body.style.overflow = "hidden";
     } else {
       dialog.close();
       document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     }
   }, [isOpen]);
 
@@ -140,19 +143,19 @@ export function CommandMenu() {
 
       <dialog
         ref={dialogRef}
-        className="w-full max-w-[28rem] rounded-xl border border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md backdrop-saturate-150 p-0 shadow-lg text-[var(--foreground)] backdrop:bg-black/20 backdrop:backdrop-blur-sm m-auto top-[10%] bottom-auto open:animate-in open:fade-in-90 open:zoom-in-95"
+        className="w-[calc(100%-2rem)] max-w-[28rem] rounded-xl border border-[var(--border)] bg-[var(--background)]/80 backdrop-blur-md backdrop-saturate-150 p-0 shadow-lg text-[var(--foreground)] backdrop:bg-black/20 backdrop:backdrop-blur-sm m-auto top-[10%] bottom-auto open:animate-in open:fade-in-90 open:zoom-in-95"
         onClick={(e) => {
           if (e.target === dialogRef.current) handleClose();
         }}
         onClose={handleClose}
       >
-        <div className="flex flex-col w-full h-full max-h-[60vh] overflow-hidden rounded-xl">
+        <div className="flex flex-col w-full h-full max-h-[80dvh] overflow-hidden rounded-xl">
           <div className="flex items-center px-4 py-3 border-b border-[var(--border)]">
             <Search size={16} className="text-[var(--muted-foreground)] mr-3 shrink-0" />
             <input
               ref={inputRef}
               autoFocus
-              className="flex-1 bg-transparent border-none outline-none text-sm placeholder-[var(--muted-foreground)]"
+              className="flex-1 bg-transparent border-none outline-none text-base md:text-sm placeholder-[var(--muted-foreground)]"
               placeholder="search pages and actions…"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
