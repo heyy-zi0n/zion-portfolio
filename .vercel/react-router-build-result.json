@@ -1,0 +1,213 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs_eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "root": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "portfolio/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "portfolio/about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "portfolio/experience": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "portfolio/projects": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "portfolio/project": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "portfolio/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "portfolio/not-found": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "app/root.tsx",
+        "path": "",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "portfolio/layout": {
+        "id": "portfolio/layout",
+        "parentId": "root",
+        "file": "app/portfolio/layout.tsx",
+        "config": {}
+      },
+      "portfolio/home": {
+        "id": "portfolio/home",
+        "parentId": "portfolio/layout",
+        "file": "app/portfolio/home.tsx",
+        "index": true,
+        "config": {}
+      },
+      "portfolio/about": {
+        "id": "portfolio/about",
+        "parentId": "portfolio/layout",
+        "file": "app/portfolio/about.tsx",
+        "path": "about",
+        "config": {}
+      },
+      "portfolio/experience": {
+        "id": "portfolio/experience",
+        "parentId": "portfolio/layout",
+        "file": "app/portfolio/experience.tsx",
+        "path": "experience",
+        "config": {}
+      },
+      "portfolio/projects": {
+        "id": "portfolio/projects",
+        "parentId": "portfolio/layout",
+        "file": "app/portfolio/projects.tsx",
+        "path": "projects",
+        "config": {}
+      },
+      "portfolio/project": {
+        "id": "portfolio/project",
+        "parentId": "portfolio/layout",
+        "file": "app/portfolio/project.tsx",
+        "path": "projects/:slug",
+        "config": {}
+      },
+      "portfolio/contact": {
+        "id": "portfolio/contact",
+        "parentId": "portfolio/layout",
+        "file": "app/portfolio/contact.tsx",
+        "path": "contact",
+        "config": {}
+      },
+      "portfolio/not-found": {
+        "id": "portfolio/not-found",
+        "parentId": "portfolio/layout",
+        "file": "app/portfolio/not-found.tsx",
+        "path": "*",
+        "config": {}
+      }
+    }
+  },
+  "reactRouterConfig": {
+    "appDirectory": "C:/Users/HomePC/OneDrive/Documents/zion-portfolio/app",
+    "basename": "/",
+    "buildDirectory": "C:/Users/HomePC/OneDrive/Documents/zion-portfolio/build",
+    "future": {
+      "unstable_optimizeDeps": false,
+      "v8_passThroughRequests": false,
+      "v8_trailingSlashAwareDataRequests": false,
+      "unstable_previewServerPrerendering": false,
+      "v8_middleware": false,
+      "v8_splitRouteModules": false,
+      "v8_viteEnvironmentApi": false
+    },
+    "prerender": true,
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "root.tsx",
+        "path": ""
+      },
+      "portfolio/layout": {
+        "id": "portfolio/layout",
+        "parentId": "root",
+        "file": "portfolio/layout.tsx"
+      },
+      "portfolio/home": {
+        "id": "portfolio/home",
+        "parentId": "portfolio/layout",
+        "file": "portfolio/home.tsx",
+        "index": true
+      },
+      "portfolio/about": {
+        "id": "portfolio/about",
+        "parentId": "portfolio/layout",
+        "file": "portfolio/about.tsx",
+        "path": "about"
+      },
+      "portfolio/experience": {
+        "id": "portfolio/experience",
+        "parentId": "portfolio/layout",
+        "file": "portfolio/experience.tsx",
+        "path": "experience"
+      },
+      "portfolio/projects": {
+        "id": "portfolio/projects",
+        "parentId": "portfolio/layout",
+        "file": "portfolio/projects.tsx",
+        "path": "projects"
+      },
+      "portfolio/project": {
+        "id": "portfolio/project",
+        "parentId": "portfolio/layout",
+        "file": "portfolio/project.tsx",
+        "path": "projects/:slug"
+      },
+      "portfolio/contact": {
+        "id": "portfolio/contact",
+        "parentId": "portfolio/layout",
+        "file": "portfolio/contact.tsx",
+        "path": "contact"
+      },
+      "portfolio/not-found": {
+        "id": "portfolio/not-found",
+        "parentId": "portfolio/layout",
+        "file": "portfolio/not-found.tsx",
+        "path": "*"
+      }
+    },
+    "routeDiscovery": {
+      "mode": "lazy",
+      "manifestPath": "/__manifest"
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true,
+    "subResourceIntegrity": false,
+    "allowedActionOrigins": false,
+    "unstable_routeConfig": [
+      {
+        "id": "root",
+        "path": "",
+        "file": "root.tsx",
+        "children": [
+          {
+            "file": "portfolio/layout.tsx",
+            "children": [
+              {
+                "file": "portfolio/home.tsx",
+                "index": true
+              },
+              {
+                "file": "portfolio/about.tsx",
+                "path": "about"
+              },
+              {
+                "file": "portfolio/experience.tsx",
+                "path": "experience"
+              },
+              {
+                "file": "portfolio/projects.tsx",
+                "path": "projects"
+              },
+              {
+                "file": "portfolio/project.tsx",
+                "path": "projects/:slug"
+              },
+              {
+                "file": "portfolio/contact.tsx",
+                "path": "contact"
+              },
+              {
+                "file": "portfolio/not-found.tsx",
+                "path": "*"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
