@@ -7,17 +7,17 @@
 @layer base {
   :root {
     --background: #fdfdfd;
-    --foreground: #000000;
+    --foreground: #111111;
     --card: #ffffff;
     --muted: #f5f5f5;
-    --muted-foreground: #000000;
+    --muted-foreground: #737373;
     --border: #e5e5e5;
     interpolate-size: allow-keywords;
   }
   
   .dark {
     --background: #121212;
-    --foreground: #ffffff;
+    --foreground: #f5f5f5;
     --card: #1e1e1e;
     --muted: #262626;
     --muted-foreground: #a3a3a3;
