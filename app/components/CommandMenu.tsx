@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, useRouteLoaderData } from "react-router";
 import { Search } from "lucide-react";
-import { PROJECTS, SOCIAL_LINKS, HAS_CV } from "../data/portfolio";
+import { SOCIAL_LINKS } from "../data/static-fallback";
+import type { Project } from "../types/database";
 import { cn } from "../lib/utils";
 import { useTheme } from "./ThemeProvider";
 
@@ -20,6 +21,10 @@ export function CommandMenu() {
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
   const { toggleTheme } = useTheme();
+  const loaderData = useRouteLoaderData("portfolio") as { projects: Project[], cvPath: string | null } | undefined;
+  
+  const projects = loaderData?.projects || [];
+  const cvPath = loaderData?.cvPath;
 
   const handleClose = () => {
     setIsOpen(false);
@@ -61,11 +66,14 @@ export function CommandMenu() {
     { id: "projects", label: "projects", group: "PAGES", onSelect: () => navigate("/projects") },
     { id: "connect", label: "connect", group: "PAGES", onSelect: () => navigate("/contact") },
     
-    ...PROJECTS.map((p) => ({
+    ...projects.map((p) => ({
       id: `project-${p.slug}`,
       label: p.title,
       group: "CASE STUDIES",
-      onSelect: () => navigate(`/projects/${p.slug}`)
+      onSelect: () => {
+        navigate(`/projects/${p.slug}`);
+        handleClose();
+      }
     })),
     
     ...SOCIAL_LINKS.map((s) => ({
@@ -77,15 +85,16 @@ export function CommandMenu() {
         else window.location.href = s.url;
       }
     })),
-    ...(HAS_CV ? [{
+    ...(cvPath ? [{
       id: "download-cv",
       label: "download my cv",
       group: "ACTIONS",
       onSelect: () => {
         const a = document.createElement('a');
-        a.href = "/zion-faith-omosanya-cv.pdf";
+        a.href = cvPath;
         a.download = "Zion-faith-Pelumi-Omosanya-CV.pdf";
         a.click();
+        handleClose();
       }
     }] : []),
     

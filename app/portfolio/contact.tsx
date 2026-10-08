@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Breadcrumb } from "../components/Breadcrumb";
-import { SOCIAL_LINKS } from "../data/portfolio";
+import { SOCIAL_LINKS } from "../data/static-fallback";
 import { generateMeta } from "../lib/meta";
 
 export function meta() {

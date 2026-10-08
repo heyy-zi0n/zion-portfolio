@@ -3,8 +3,18 @@ import { ThemeToggle } from "../components/ThemeToggle";
 import { CommandMenu } from "../components/CommandMenu";
 import { MobileNav } from "../components/MobileNav";
 import { cn } from "../lib/utils";
+import { getPublishedProjects, getSiteSettings } from "../services/portfolio.server";
+import type { Route } from "./+types/layout";
 
-export default function PortfolioLayout() {
+export async function loader({ request }: Route.LoaderArgs) {
+  const [projects, settings] = await Promise.all([
+    getPublishedProjects(request),
+    getSiteSettings(request)
+  ]);
+  return { projects, cvPath: settings?.cvPath };
+}
+
+export default function PortfolioLayout({ loaderData }: Route.ComponentProps) {
   const location = useLocation();
   const isHome = location.pathname === "/";
 

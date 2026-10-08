@@ -134,3 +134,9 @@ details[open]::details-content {
   opacity: 1;
   block-size: auto;
 }
+
+@layer components {
+  .input-base {
+    @apply w-full bg-[var(--background)] border border-[var(--border)] rounded-md px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] text-[var(--foreground)] placeholder:text-[var(--muted-foreground)]/50 transition-all;
+  }
+}

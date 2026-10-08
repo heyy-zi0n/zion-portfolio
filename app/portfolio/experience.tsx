@@ -1,69 +1,86 @@
-import { Breadcrumb } from "../components/Breadcrumb";
-import { EXPERIENCES, HAS_CV } from "../data/portfolio";
+import { ArrowUpRight, Download } from "lucide-react";
+import { getPublishedExperiences, getSiteSettings } from "../services/portfolio.server";
 import { generateMeta } from "../lib/meta";
-import { ArrowDownRight } from "lucide-react";
-import { cn } from "../lib/utils";
+import type { Route } from "./+types/experience";
 
 export function meta() {
   return generateMeta(
-    "Career — Zion-faith Pelumi Omosanya",
-    "Professional experience and career history of Zion-faith Pelumi Omosanya."
+    "Experience — Zion-faith Pelumi Omosanya",
+    "Where I've worked and what I've done."
   );
 }
 
-export default function Experience() {
+export async function loader({ request }: Route.LoaderArgs) {
+  const [experiences, settings] = await Promise.all([
+    getPublishedExperiences(request),
+    getSiteSettings(request)
+  ]);
+  return { experiences, cvPath: settings?.cvPath };
+}
+
+export default function Experience({ loaderData }: Route.ComponentProps) {
+  const { experiences, cvPath } = loaderData;
+
   return (
-    <div className="animate-in fade-in duration-500 slide-in-from-bottom-2">
-      <Breadcrumb items={[{ label: "about me", href: "/about" }, { label: "career" }]} />
-      
-      <div className="flex flex-col gap-12 mt-8">
-        {EXPERIENCES.map((exp, index) => (
-          <div key={exp.id} className="relative">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
-              <div className="text-[var(--muted-foreground)] text-sm pt-1 w-8 shrink-0">
-                0{index + 1}
+    <div className="animate-in fade-in duration-500 slide-in-from-bottom-2 flex flex-col min-h-[calc(100vh-200px)]">
+      <h1 className="text-xl md:text-2xl text-[var(--foreground)] font-normal mb-12">
+        Where I've worked and what I've done.
+      </h1>
+
+      <div className="flex flex-col gap-16 flex-1">
+        {experiences.map((exp) => (
+          <div key={exp.id} className="flex flex-col md:grid md:grid-cols-4 gap-4 md:gap-8">
+            <div className="md:col-span-1">
+              {exp.organizationUrl ? (
+                <a 
+                  href={exp.organizationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-1.5 text-[var(--foreground)] font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm"
+                >
+                  <span className="link-highlight">{exp.organization}</span>
+                  <ArrowUpRight size={14} className="text-[var(--muted-foreground)] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                </a>
+              ) : (
+                <h2 className="text-[var(--foreground)] font-medium">
+                  {exp.organization}
+                </h2>
+              )}
+            </div>
+            
+            <div className="md:col-span-3 flex flex-col gap-6">
+              <div className="flex flex-col">
+                <h3 className="text-lg text-[var(--foreground)] font-medium">
+                  {exp.role}
+                </h3>
               </div>
               
-              <div className="flex flex-col gap-8 flex-1">
-                {exp.roles.map((role, roleIndex) => (
-                  <div key={role.id} className="flex flex-col relative">
-                    {exp.roles.length > 1 && roleIndex !== exp.roles.length - 1 && (
-                      <div className="absolute left-[-1.5rem] top-6 bottom-[-2rem] w-px bg-[var(--border)] hidden sm:block" />
-                    )}
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 mb-4">
-                      <div>
-                        <h3 className="text-[var(--foreground)] font-medium text-base">{exp.company}</h3>
-                        <div className="text-[var(--foreground)] text-sm font-light mt-0.5">{role.title}</div>
-                      </div>
-                      <span className="text-[var(--muted-foreground)] text-xs font-light tracking-wide uppercase">
-                        {role.period}
-                      </span>
-                    </div>
-                    
-                    <ul className="flex flex-col gap-3">
-                      {role.highlights.map((highlight, i) => (
-                        <li key={i} className="text-[var(--muted-foreground)] text-sm font-light leading-relaxed flex items-start">
-                          <span className="mr-3 mt-2 w-1 h-1 rounded-full bg-[var(--muted-foreground)] opacity-40 shrink-0" />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+              <ul className="flex flex-col gap-3">
+                {exp.highlights.map((highlight, i) => (
+                  <li key={i} className="flex gap-4">
+                    <span className="text-[var(--muted-foreground)] select-none mt-1.5 text-[10px]">
+                      ◆
+                    </span>
+                    <span className="text-[var(--muted-foreground)] leading-relaxed font-light">
+                      {highlight}
+                    </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         ))}
       </div>
 
-      {HAS_CV && (
-        <div className="mt-12 flex justify-end">
+      {cvPath && (
+        <div className="mt-16 pt-8 border-t border-[var(--border)] flex justify-end">
           <a
-            href="/zion-faith-omosanya-cv.pdf"
-            download="Zion-faith-Pelumi-Omosanya-CV.pdf"
-            className="link-sweep text-sm font-light text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors inline-flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm pb-0.5"
+            href={cvPath}
+            download
+            className="group flex items-center gap-2 text-sm font-medium text-[var(--foreground)] hover:text-[var(--muted-foreground)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--foreground)] rounded-sm p-1"
           >
-            download my cv <ArrowDownRight size={14} strokeWidth={1.5} />
+            <span className="link-sweep">download my cv</span>
+            <Download size={14} className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
           </a>
         </div>
       )}

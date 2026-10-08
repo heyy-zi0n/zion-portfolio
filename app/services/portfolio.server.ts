@@ -8,18 +8,22 @@ export async function getPublishedProjects(request: Request): Promise<Project[]>
   if (!supabase) {
     // Supabase not configured, use static fallback
     return fallbackProjects.map((p, index) => ({
-      ...p,
-      fullTitle: p.fullTitle || null,
-      problem: p.problem || null,
-      outcome: p.outcome || null,
-      imagePath: p.imagePath || null,
-      repositoryUrl: p.repositoryUrl || null,
-      liveUrl: p.liveUrl || null,
+      id: p.slug, // Use slug as ID for fallback
+      slug: p.slug,
+      title: p.title,
+      fullTitle: p.title,
+      description: p.description,
+      problem: p.caseStudy?.problem || null,
+      outcome: p.caseStudy?.outcome || null,
+      technologies: p.techUsed || [],
+      decisions: p.caseStudy?.decisions || [],
+      systemFlow: [],
+      imagePath: p.img || null,
+      repositoryUrl: p.repo || null,
+      liveUrl: p.url || null,
       status: "published",
       sortOrder: index + 1,
       publishedAt: new Date().toISOString(),
-      decisions: p.decisions || [],
-      systemFlow: p.systemFlow || []
     })) as Project[];
   }
 
@@ -45,18 +49,22 @@ export async function getProjectBySlug(request: Request, slug: string): Promise<
     const project = fallbackProjects.find(p => p.slug === slug);
     if (!project) return null;
     return {
-      ...project,
-      fullTitle: project.fullTitle || null,
-      problem: project.problem || null,
-      outcome: project.outcome || null,
-      imagePath: project.imagePath || null,
-      repositoryUrl: project.repositoryUrl || null,
-      liveUrl: project.liveUrl || null,
+      id: project.slug,
+      slug: project.slug,
+      title: project.title,
+      fullTitle: project.title,
+      description: project.description,
+      problem: project.caseStudy?.problem || null,
+      outcome: project.caseStudy?.outcome || null,
+      technologies: project.techUsed || [],
+      decisions: project.caseStudy?.decisions || [],
+      systemFlow: [],
+      imagePath: project.img || null,
+      repositoryUrl: project.repo || null,
+      liveUrl: project.url || null,
       status: "published",
       sortOrder: 1,
       publishedAt: new Date().toISOString(),
-      decisions: project.decisions || [],
-      systemFlow: project.systemFlow || []
     } as Project;
   }
 
