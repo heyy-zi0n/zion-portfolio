@@ -6,6 +6,6 @@ const isVercel = process.env.VERCEL === "1";
 
 export default {
   ssr: true,
-  prerender: true,
+  prerender: ["/", "/about", "/contact"],
   presets: isVercel ? [vercelPreset()] : [],
 } satisfies Config;
