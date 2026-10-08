@@ -53,7 +53,14 @@ To verify:
 2. Ensure the `portfolio-media` bucket exists and is marked as Public.
 3. If it doesn't exist, create it manually and name it `portfolio-media` (Public: Yes).
 
-## 8. Run Locally
+## 8. Disable Public Signups (CRITICAL SECURITY STEP)
+To prevent unauthorized users from creating accounts on your database:
+1. Go to **Authentication > Providers** in the Supabase dashboard.
+2. Open the **Email** provider settings.
+3. Toggle off **Enable Signups** (or uncheck "Allow new users to sign up").
+4. Click **Save**.
+
+## 9. Run Locally
 Run your local development server to test:
 
 ```bash
@@ -63,19 +70,19 @@ npm run dev
 Visit `http://localhost:5173/admin/login` and log in with the email and password you created in Step 4.
 The public portfolio will dynamically read from the database now that your `.env` is configured.
 
-## 9. Configure Vercel Env Vars
+## 10. Configure Vercel Env Vars
 1. Go to your project on Vercel.
 2. Navigate to **Settings > Environment Variables**.
 3. Add `SUPABASE_URL` and `SUPABASE_ANON_KEY` with your production project's values.
 4. Redeploy the project on Vercel.
 
-## 10. Configure Render Env Vars
+## 11. Configure Render Env Vars
 1. Go to your web service on Render.
 2. Navigate to **Environment**.
 3. Add `SUPABASE_URL` and `SUPABASE_ANON_KEY`.
 4. Trigger a manual deploy on Render.
 
-## 11. Verify Implementation
+## 12. Verify Implementation
 1. **Admin Login**: Visit `/admin/login` on production and log in.
 2. **Public Content**: Ensure the homepage, projects, and career pages load correctly using database data.
 3. **Remove Reliance on Fallback**: Once you are fully confident the CMS is working perfectly in production, you can choose to remove the `app/data/static-fallback.ts` reliance, although it's safe to keep as a failsafe.

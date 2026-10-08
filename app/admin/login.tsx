@@ -16,6 +16,11 @@ export async function loader({ request }: Route.LoaderArgs) {
   return null;
 }
 
+// Simple in-memory rate limiter for login attempts (works in production Node.js)
+// In a serverless environment (e.g. Vercel), this only limits per-instance, 
+// but it still provides a basic layer of defense alongside Supabase's native limits.
+const loginAttempts = new Map<string, { count: number; resetAt: number }>();
+
 export async function action({ request }: Route.ActionArgs) {
   const formData = await request.formData();
   const email = formData.get("email")?.toString();
@@ -23,6 +28,23 @@ export async function action({ request }: Route.ActionArgs) {
 
   if (!email || !password) {
     return { error: "Email and password are required." };
+  }
+
+  // Rate Limiting Logic (Max 5 attempts per 15 minutes per IP/Email)
+  const ip = request.headers.get("x-forwarded-for") || "unknown-ip";
+  const rateLimitKey = `${ip}-${email}`;
+  const now = Date.now();
+  const attemptRecord = loginAttempts.get(rateLimitKey);
+
+  if (attemptRecord) {
+    if (now > attemptRecord.resetAt) {
+      // Time passed, reset
+      loginAttempts.delete(rateLimitKey);
+    } else if (attemptRecord.count >= 5) {
+      // Blocked
+      const minutesLeft = Math.ceil((attemptRecord.resetAt - now) / 1000 / 60);
+      return { error: `Too many login attempts. Please try again in ${minutesLeft} minutes.` };
+    }
   }
 
   const { supabase, headers } = createSupabaseServerClient(request);
@@ -36,6 +58,12 @@ export async function action({ request }: Route.ActionArgs) {
   });
 
   if (signInError) {
+    // Record failed attempt
+    const current = loginAttempts.get(rateLimitKey);
+    loginAttempts.set(rateLimitKey, {
+      count: (current?.count || 0) + 1,
+      resetAt: current?.resetAt || now + 15 * 60 * 1000 // 15 minutes from first failure
+    });
     return { error: "Invalid login credentials." };
   }
 
@@ -45,6 +73,9 @@ export async function action({ request }: Route.ActionArgs) {
     await supabase.auth.signOut();
     return { error: "Unauthorized account." };
   }
+
+  // Successful login, clear attempts
+  loginAttempts.delete(rateLimitKey);
 
   return redirect("/admin", { headers });
 }
