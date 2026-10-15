@@ -1,6 +1,7 @@
 import { createSupabaseServerClient } from "../lib/supabase.server";
-import { PROJECTS as fallbackProjects, EXPERIENCES as fallbackExperiences, HAS_CV } from "../data/static-fallback";
+import { PROJECTS as fallbackProjects, EXPERIENCES as fallbackExperiences, SOCIAL_LINKS as fallbackSocialLinks, HAS_CV } from "../data/static-fallback";
 import type { Project, Experience, SiteSettings } from "../types/database";
+import { isSocialPlatform, type SocialLink } from "../lib/social-links";
 
 export async function getPublishedProjects(request: Request): Promise<Project[]> {
   const { supabase } = createSupabaseServerClient(request);
@@ -139,7 +140,52 @@ export async function getSiteSettings(request: Request): Promise<SiteSettings> {
   };
 }
 
+function getFallbackSocialLinks(): SocialLink[] {
+  return fallbackSocialLinks.map((link, index) => ({
+    id: String(link.id),
+    platform: isSocialPlatform(link.name) ? link.name : "other",
+    label: link.name,
+    url: link.url,
+    sortOrder: index + 1,
+    isVisible: true,
+  }));
+}
+
+/**
+ * Visible links in admin-configured order. The static fallback is used only when Supabase is
+ * unconfigured or the request fails; a successful empty result is returned as an empty list.
+ */
+export async function getVisibleSocialLinks(request: Request): Promise<SocialLink[]> {
+  const { supabase } = createSupabaseServerClient(request);
+
+  if (!supabase) return getFallbackSocialLinks();
+
+  const { data, error } = await supabase
+    .from("social_links")
+    .select("*")
+    .eq("is_visible", true)
+    .order("sort_order", { ascending: true })
+    .order("created_at", { ascending: true });
+
+  if (error || !data) {
+    console.error("Error fetching social links from Supabase:", error);
+    return getFallbackSocialLinks();
+  }
+
+  return data.map(mapDbSocialLinkToDomain);
+}
+
 // Helpers
+export function mapDbSocialLinkToDomain(row: any): SocialLink {
+  return {
+    id: row.id,
+    platform: isSocialPlatform(row.platform) ? row.platform : "other",
+    label: row.label,
+    url: row.url,
+    sortOrder: row.sort_order,
+    isVisible: row.is_visible,
+  };
+}
 function mapDbProjectToDomain(row: any): Project {
   return {
     id: row.id,

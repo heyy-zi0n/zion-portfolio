@@ -3,7 +3,7 @@ import { requireAdmin } from "../services/auth.server";
 import { createSupabaseServerClient } from "../lib/supabase.server";
 import type { Route } from "./+types/layout";
 import { generateMeta } from "../lib/meta";
-import { LogOut, LayoutDashboard, FolderKanban, BriefcaseBusiness, Image as ImageIcon, Settings, ExternalLink, Menu, X } from "lucide-react";
+import { LogOut, LayoutDashboard, FolderKanban, BriefcaseBusiness, Share2, Image as ImageIcon, Settings, ExternalLink, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { cn } from "../lib/utils";
 
@@ -41,6 +41,7 @@ export default function AdminLayout() {
     { label: "Overview", href: "/admin", icon: LayoutDashboard },
     { label: "Projects", href: "/admin/projects", icon: FolderKanban },
     { label: "Career", href: "/admin/experience", icon: BriefcaseBusiness },
+    { label: "Connect", href: "/admin/connect", icon: Share2 },
     { label: "Media", href: "/admin/media", icon: ImageIcon },
     { label: "Settings", href: "/admin/settings", icon: Settings },
   ];

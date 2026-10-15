@@ -12,6 +12,7 @@ export default [
     route("admin/experience", "admin/experience/index.tsx"),
     route("admin/experience/new", "admin/experience/editor.tsx", { id: "admin/experience/new" }),
     route("admin/experience/:id/edit", "admin/experience/editor.tsx", { id: "admin/experience/edit" }),
+    route("admin/connect", "admin/connect.tsx"),
     route("admin/media", "admin/media.tsx"),
     route("admin/settings", "admin/settings.tsx"),
   ]),

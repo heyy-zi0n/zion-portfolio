@@ -134,3 +134,12 @@ VALUES
 
 -- Seed Site Settings
 INSERT INTO site_settings (cv_path) VALUES (NULL);
+
+-- Seed social links (idempotent: safe to re-run; skips rows whose url already exists)
+INSERT INTO social_links (platform, label, url, sort_order, is_visible)
+VALUES
+  ('email', 'email', 'mailto:zionomosanya485@gmail.com', 1, true),
+  ('github', 'github', 'https://github.com/heyy-zi0n', 2, true),
+  ('fiverr', 'fiverr', 'https://www.fiverr.com/ziondatapro?public_mode=true', 3, true),
+  ('whatsapp', 'whatsapp', 'https://wa.me/2347037234590', 4, true)
+ON CONFLICT (url) DO NOTHING;

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /admin
 
 Sitemap: https://zion-portfolio-beryl.vercel.app/sitemap.xml
