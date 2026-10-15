@@ -2,12 +2,20 @@ import { Breadcrumb } from "../components/Breadcrumb";
 import { ProjectIndex } from "../components/ProjectIndex";
 import { getPublishedProjects } from "../services/portfolio.server";
 import { generateMeta } from "../lib/meta";
+import { generateBreadcrumbSchema } from "../lib/schema";
 import type { Route } from "./+types/projects";
 
 export function meta() {
   return generateMeta(
-    "Projects — Zion-faith Pelumi Omosanya",
-    "Selected software development and web engineering projects by Zion-faith Pelumi Omosanya."
+    "Projects | Zion-faith Pelumi Omosanya",
+    "Selected software development and web engineering projects by Zion-faith Pelumi Omosanya, including full-stack systems and frontend applications.",
+    {
+      path: "/projects",
+      schema: generateBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Projects", path: "/projects" },
+      ]),
+    }
   );
 }
 

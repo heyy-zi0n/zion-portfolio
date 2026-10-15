@@ -5,7 +5,7 @@ import type { Route } from "./+types/login";
 import { generateMeta } from "../lib/meta";
 
 export function meta() {
-  return generateMeta("Admin Login", "Sign in to the CMS");
+  return generateMeta("Admin Login", "Sign in to the CMS", { noindex: true });
 }
 
 export async function loader({ request }: Route.LoaderArgs) {

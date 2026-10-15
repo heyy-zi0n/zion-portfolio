@@ -108,3 +108,24 @@ export function getLinkDetail(url: string): string {
 export function isExternalUrl(url: string): boolean {
   return url.startsWith("https://");
 }
+
+/** Platforms that are genuine public profile pages (excludes email, WhatsApp chat links and "other"). */
+const PROFILE_PLATFORMS: readonly SocialPlatform[] = ["github", "linkedin", "instagram", "tiktok", "x", "youtube", "facebook", "fiverr", "website"];
+
+/** Profile URLs for schema.org sameAs: https only, tracking query strings and fragments removed, deduplicated. */
+export function getProfileUrls(links: readonly SocialLink[]): string[] {
+  const urls = new Set<string>();
+  for (const link of links) {
+    if (!PROFILE_PLATFORMS.includes(link.platform)) continue;
+    try {
+      const parsed = new URL(link.url);
+      if (parsed.protocol !== "https:") continue;
+      parsed.search = "";
+      parsed.hash = "";
+      urls.add(parsed.toString());
+    } catch {
+      // Ignore malformed URLs
+    }
+  }
+  return [...urls];
+}

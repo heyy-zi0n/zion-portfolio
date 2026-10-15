@@ -1,10 +1,28 @@
 import { Link } from "react-router";
 import { generateMeta } from "../lib/meta";
+import { generatePersonSchema, generateWebsiteSchema } from "../lib/schema";
+import { getVisibleSocialLinks } from "../services/portfolio.server";
+import { getProfileUrls } from "../lib/social-links";
+import type { Route } from "./+types/home";
 
-export function meta() {
+export async function loader({ request }: Route.LoaderArgs) {
+  const links = await getVisibleSocialLinks(request);
+  const profileUrls = getProfileUrls(links);
+  return { profileUrls };
+}
+
+export function meta({ data }: Route.MetaArgs) {
+  const profileUrls = data?.profileUrls;
   return generateMeta(
-    "Zion-faith Pelumi Omosanya — Software Developer",
-    "Portfolio of Zion-faith Pelumi Omosanya, a software developer in Lagos building responsive web experiences and practical software systems."
+    "Zion-faith Pelumi Omosanya | Software Developer",
+    "Explore the portfolio of Zion-faith Pelumi Omosanya, a software developer and Computer Science student at Lagos State University, building web applications, frontend experiences and practical software systems.",
+    {
+      path: "/",
+      schema: [
+        generatePersonSchema({ profileUrls }),
+        generateWebsiteSchema(),
+      ],
+    }
   );
 }
 

@@ -1,11 +1,32 @@
 import { Link } from "react-router";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { generateMeta } from "../lib/meta";
+import { generateBreadcrumbSchema, generatePersonSchema } from "../lib/schema";
+import { getVisibleSocialLinks } from "../services/portfolio.server";
+import { getProfileUrls } from "../lib/social-links";
+import type { Route } from "./+types/about";
 
-export function meta() {
+export async function loader({ request }: Route.LoaderArgs) {
+  const links = await getVisibleSocialLinks(request);
+  const profileUrls = getProfileUrls(links);
+  return { profileUrls };
+}
+
+export function meta({ data }: Route.MetaArgs) {
+  const profileUrls = data?.profileUrls;
   return generateMeta(
-    "About — Zion-faith Pelumi Omosanya",
-    "Learn about Zion-faith Pelumi Omosanya, a software developer focused on web applications and frontend engineering."
+    "About Zion-faith Pelumi Omosanya | Software Developer",
+    "Learn about Zion-faith Pelumi Omosanya, a software developer and Computer Science student at LASU FCIT building web applications, frontend experiences and practical software systems.",
+    {
+      path: "/about",
+      schema: [
+        generatePersonSchema({ profileUrls }),
+        generateBreadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ]),
+      ],
+    }
   );
 }
 

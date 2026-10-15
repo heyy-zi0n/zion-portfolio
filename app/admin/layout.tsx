@@ -8,10 +8,7 @@ import { useState, useEffect } from "react";
 import { cn } from "../lib/utils";
 
 export function meta() {
-  return [
-    ...generateMeta("CMS Admin", "Manage portfolio content"),
-    { name: "robots", content: "noindex,nofollow" }
-  ];
+  return generateMeta("CMS Admin", "Manage portfolio content", { noindex: true });
 }
 
 export async function loader({ request }: Route.LoaderArgs) {

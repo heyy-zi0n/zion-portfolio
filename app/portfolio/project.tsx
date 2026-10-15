@@ -21,12 +21,29 @@ export async function loader({ request, params }: Route.LoaderArgs) {
   return { project, nextProject };
 }
 
+import { generateBreadcrumbSchema } from "../lib/schema";
+
 export function meta({ data }: Route.MetaArgs) {
-  if (!data?.project) return generateMeta("Project Not Found", "Project not found.");
-  
+  if (!data?.project) {
+    return generateMeta("Project Not Found | Zion-faith Pelumi Omosanya", "Project not found.", {
+      noindex: true,
+    });
+  }
+
+  const project = data.project;
   return generateMeta(
-    `${data.project.title} — Zion-faith Pelumi Omosanya`,
-    data.project.description
+    `${project.title} | Zion-faith Pelumi Omosanya`,
+    project.description,
+    {
+      path: `/projects/${project.slug}`,
+      image: project.imagePath || undefined,
+      type: "article",
+      schema: generateBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Projects", path: "/projects" },
+        { name: project.title, path: `/projects/${project.slug}` },
+      ]),
+    }
   );
 }
 

@@ -6,10 +6,19 @@ import { format, parseISO } from "date-fns";
 import type { Experience } from "../types/database";
 import { ArrowDownRight } from "lucide-react";
 
+import { generateBreadcrumbSchema } from "../lib/schema";
+
 export function meta() {
   return generateMeta(
-    "Career — Zion-faith Pelumi Omosanya",
-    "Professional experience and career history of Zion-faith Pelumi Omosanya."
+    "Experience | Zion-faith Pelumi Omosanya",
+    "Professional software development and engineering experience of Zion-faith Pelumi Omosanya across frontend development and web systems.",
+    {
+      path: "/experience",
+      schema: generateBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Career", path: "/experience" },
+      ]),
+    }
   );
 }
 

@@ -54,7 +54,7 @@ export function ProjectDetailView({ project, nextProject, isAdminPreview = false
             <div className="mt-4 rounded-md overflow-hidden border border-[var(--border)]">
               <img 
                 src={project.imagePath} 
-                alt={project.title} 
+                alt={`${project.title} project screenshot`} 
                 className="w-full h-auto"
                 style={{ viewTransitionName: `project-shot-${project.slug}` }}
                 loading="eager"

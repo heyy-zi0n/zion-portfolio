@@ -1,6 +1,9 @@
 import { type RouteConfig, index, layout, route } from "@react-router/dev/routes";
 
 export default [
+  // Dynamic XML Sitemap
+  route("sitemap.xml", "routes/sitemap.ts"),
+
   // Admin Routes
   route("admin/login", "admin/login.tsx"),
   layout("admin/layout.tsx", [

@@ -2,7 +2,9 @@ import { Link } from "react-router";
 import { generateMeta } from "../lib/meta";
 
 export function meta() {
-  return generateMeta("Not Found", "This page doesn't exist.");
+  return generateMeta("Page Not Found | Zion-faith Pelumi Omosanya", "This page does not exist.", {
+    noindex: true,
+  });
 }
 
 export default function NotFound() {

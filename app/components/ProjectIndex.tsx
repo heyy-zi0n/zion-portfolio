@@ -79,7 +79,7 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
               
               {!isPointerFine && project.imagePath && (
                 <div className="mb-6 rounded-md overflow-hidden border border-[var(--border)]">
-                  <img src={project.imagePath} alt={project.title} className="w-full h-auto" loading="lazy" style={{ viewTransitionName: `project-shot-${project.slug}` }} />
+                  <img src={project.imagePath} alt={`${project.title} project screenshot`} className="w-full h-auto" loading="lazy" style={{ viewTransitionName: `project-shot-${project.slug}` }} />
                 </div>
               )}
               
@@ -121,7 +121,7 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
         >
           <img 
             src={projects[hoveredIndex].imagePath!} 
-            alt={projects[hoveredIndex].title} 
+            alt={`${projects[hoveredIndex].title} project screenshot`} 
             className="w-full h-auto object-cover aspect-video"
             loading="eager"
           />

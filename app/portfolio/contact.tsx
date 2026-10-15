@@ -5,10 +5,19 @@ import { generateMeta } from "../lib/meta";
 import { getLinkDetail, isExternalUrl } from "../lib/social-links";
 import type { Route } from "./+types/contact";
 
+import { generateBreadcrumbSchema } from "../lib/schema";
+
 export function meta() {
   return generateMeta(
-    "Connect — Zion-faith Pelumi Omosanya",
-    "Contact Zion-faith Pelumi Omosanya."
+    "Connect | Zion-faith Pelumi Omosanya",
+    "Connect with Zion-faith Pelumi Omosanya across GitHub, LinkedIn, email, WhatsApp, and social platforms.",
+    {
+      path: "/contact",
+      schema: generateBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        { name: "Connect", path: "/contact" },
+      ]),
+    }
   );
 }
 
